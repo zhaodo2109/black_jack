@@ -1,0 +1,81 @@
+module blackjack_fsm( input  logic clk, rst,
+							 input  logic start,
+							 input  logic hit,
+							 input  logic stand,
+
+							 output  logic [5:0] player_sum,
+							 output  logic [5:0] dealer_sum,
+
+							 output logic num_player_cards,
+							 output logic num_dealer_cards,
+							 output logic dealer_auto_hit,
+						);
+
+    typedef enum logic [2:0] {idle,deal,hit_s,stand_s,result} state_t;
+
+    state_t state, next;
+
+    always_ff @(posedge clk or negedge rst)
+        if (!rst) 
+				state <= idle;
+        else       
+				state <= next;
+
+    always_comb begin
+        
+        dealer_auto_hit = 0;
+        compare        = 0;
+        game_over      = 0;
+        next = state;
+
+        case (state)
+
+            idle: begin
+                if (start) 
+						next = deal;
+						num_player_cards = 0;
+						num_dealer_cards = 0;
+						player_sum = 0;
+						dealer_sum = 0;
+            end
+
+            deal: begin
+                num_player_cards = 2;
+                num_dealer_cards = 2;
+                if (hit)
+						next = hit_s;
+					 else if (stand)
+						next = stand_s;
+					 
+            end
+
+
+            hit_s: begin
+                if (hit) begin
+							num_player_cards +=1;
+							next = hit_s;
+					 end
+                else if (stand) 
+                    next = stand_s;
+            end
+
+            stand_s: begin
+                if (dealer_bust)
+                    next = result;
+                else if (dealer_sum < 16)
+                    dealer_auto_hit = 1;
+                else
+                    next = result;
+            end
+
+            result: begin
+                compare = 1;
+					 if (reset)
+						next = idle;
+					 end
+            end
+
+        endcase
+    end
+
+endmodule

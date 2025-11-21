@@ -1,0 +1,21 @@
+
+State Machine - |fullgame|game_fsm:game|state
+Name state.stand_s state.hit_s state.deal state.idle state.result 
+state.idle 0 0 0 0 0 
+state.deal 0 0 1 1 0 
+state.hit_s 0 1 0 1 0 
+state.stand_s 1 0 0 1 0 
+state.result 0 0 0 1 1 
+
+State Machine - |fullgame|card_draw:draw|state
+Name state.done state.check state.gen state.idle 
+state.idle 0 0 0 0 
+state.gen 0 0 1 1 
+state.check 0 1 0 1 
+state.done 1 0 0 1 
+
+State Machine - |fullgame|deck_loader:loader|state
+Name state.idle state.done state.load 
+state.idle 0 0 0 
+state.load 1 0 1 
+state.done 1 1 0 

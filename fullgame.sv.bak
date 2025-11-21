@@ -1,0 +1,93 @@
+module fullgame(input logic clk, input logic rst, input logic hit, input logic stand, input logic start);
+
+	//logic [14:0] dataout;
+	logic rise_h, fall_h;
+	logic rise_s, fall_s;
+	//logic [3:0] wptr, rptr;
+	logic wen,ren;
+	
+	logic [3:0] card_value;
+	 
+	logic [5:0] player_sum = 6'd0,
+	logic [5:0] dealer_sum = 6'd0,
+	//control signals
+	logic dealer_bust,deal_player,deal_dealer,clear_sums,compare,dealer_auto_hit;
+	logic rw;
+	logic sync_rst;
+	logic do_write,do_read;
+	
+	
+	//win signals
+	logic dealer_win,player_win,tie;
+
+	synchronizer hit_sync(.clk(clk),.w(hit),.rise(rise_h),.fall(fall_h));
+	synchronizer stand_sync(.clk(clk),.w(stand),.rise(rise_s),.fall(fall_s));
+
+	asyncRst_syncRst rst_sync(.clk(clk), .rst(rst),.syncRst(sync_rst));
+	 
+
+	deck_loader loader(
+		 .clk(clk),
+		 .rst(rst),
+		 .load_done(load_done),
+		 .deck_addr(mem_addr),
+		 .deck_wen(mem_wen),
+		 .deck_data_in(mem_in)
+	);
+
+	deck_memory bram(
+		 .clk(clk),
+		 .addr(mem_addr),
+		 .data_in(mem_in),
+		 .wen(mem_wen),
+		 .data_out(mem_out)
+	);
+
+	game_fsm game( .clk(clk), 
+						.rst(rst),
+						.start(start),
+						.hit(rise_h),
+						.stand(rise_s),
+						.player_sum(player_sum),
+						.dealer_sum(dealer_sum),
+						.dealer_bust(dealer_bust)
+						.deal_player(deal_player),
+					   .deal_dealer(deal_dealer),
+						.clear_sums(clear_sums),
+					   .compare(compare),
+						.dealer_auto_hit(dealer_auto_hit)
+					);
+
+	
+	card_draw draw( .clk(clk),
+						 .rst(rst),
+						 .request_card(deal_player|deal_dealer),
+						 .deck_addr,
+						 .deck_read_en,
+						 .deck_write_en,
+						 .deck_write_data,
+						 .deck_read_data,
+						 .card_ready,
+						 .card_data_out
+						);
+	
+
+
+	alu_logic datapath(.clk(clk),
+							 .rst(rst),
+							 .clear_sums(clear_sums),
+							 .deal_player(deal_player),
+							 .deal_dealer(deal_dealer),
+							 .compare(compare), 
+							 .card_value(card_value),
+							 .player_sum(player_sum),
+							 .dealer_sum(dealer_sum),
+							 .player_bust(player_bust),
+							 .dealer_bust(dealer_bust),
+							 .dealer_auto_hit(dealer_auto_hit),
+							 .player_win(player_win),
+							 .dealer_win(dealer_win),
+							 .tie(tie)
+						);
+
+endmodule

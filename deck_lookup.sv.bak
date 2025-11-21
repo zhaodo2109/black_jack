@@ -1,0 +1,29 @@
+module deck_lookup (
+    input  logic [5:0] addr,    // 0–51
+    output logic [6:0] data_out
+);
+    always_comb begin
+        case (addr)
+				// spades
+            6'd1:  data_out = 7'h0B; // A (00 01011) (11)
+            6'd2:  data_out = 7'h02; // 2 (00 00010) (2)
+            6'd3:  data_out = 7'h03; // 3 (00 00011) (3)
+            6'd4:  data_out = 7'h04; // 4 (00 00100) (4)
+            6'd5:  data_out = 7'h05; // 5 (00 00101) (5)
+            6'd6:  data_out = 7'h06; // 6 (00 00110) (6)
+            6'd7:  data_out = 7'h07; // 7 (00 00111) (7)
+            6'd8:  data_out = 7'h08; // 8 (00 01000) (8)
+            6'd9:  data_out = 7'h09; // 9  (00 01001) (9)
+            6'd10: data_out = 7'h0A; // 10 (00 01010) (2)
+            6'd11: data_out = 7'h0A; // J (00 01010) (2)
+            6'd12: data_out = 7'h0A; // Q (00 01010) (2)
+            6'd13: data_out = 7'h0A; // K (00 01010) (2)
+            // hearts
+            6'd13: data_out = 7'h1B;
+            6'd14: data_out = 7'h11;
+            
+            6'd51: data_out = 7'h3A;
+            default: data_out = 7'h00;
+        endcase
+    end
+endmodule
