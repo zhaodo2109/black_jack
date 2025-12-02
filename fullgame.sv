@@ -14,14 +14,13 @@ module fullgame(input logic clk, input logic rst, input logic hit, input logic s
 
 	//control signals
 	logic dealer_bust,deal_player,deal_dealer,clear_sums,compare,dealer_auto_hit;
-	logic rw;
+	logic rw,s_active;
 	logic sync_rst;
 	logic do_write,do_read;
 	
 	
 	logic card_ready;
    logic [6:0] card_data_out;
-   //logic [3:0]  card_value;
 
    assign card_value = card_data_out[3:0];
 	
@@ -51,6 +50,7 @@ module fullgame(input logic clk, input logic rst, input logic hit, input logic s
 		 .deck_data_in(loader_data_in)
 	);
 	
+	
 	card_draw draw( .clk(clk),
 						 .rst(sync_rst),
 						 .request_card(deal_player|deal_dealer),
@@ -74,6 +74,8 @@ module fullgame(input logic clk, input logic rst, input logic hit, input logic s
 		 .wen(mem_wen),
 		 .data_out(mem_out)
 	);
+	
+
 
 	game_fsm game( .clk(clk), 
 						.rst(sync_rst),
@@ -87,14 +89,16 @@ module fullgame(input logic clk, input logic rst, input logic hit, input logic s
 					   .deal_dealer(deal_dealer),
 						.clear_sums(clear_sums),
 					   .compare(compare),
-						.dealer_auto_hit(dealer_auto_hit)
+						.dealer_auto_hit(dealer_auto_hit),
+						.card_ready(card_ready),
+						.stand_active(s_active)
 					);
 
 	alu_logic datapath(.clk(clk),
 						  .rst(sync_rst),
 						  .clear_sums(clear_sums),
-						  .deal_player(deal_player & card_ready),
-						  .deal_dealer(deal_dealer & card_ready),
+						  .deal_player(deal_player),
+						  .deal_dealer(deal_dealer),
 						  .compare(compare),
 						  .card_value(card_value),
 						  .player_sum(player_sum),
@@ -104,7 +108,10 @@ module fullgame(input logic clk, input logic rst, input logic hit, input logic s
 						  .dealer_auto_hit(dealer_auto_hit),
 						  .player_win(player_win),
 						  .dealer_win(dealer_win),
-						  .tie(tie)
+						  .tie(tie),
+						  .card_ready(card_ready),
+						  .stand_active(s_active)
 						);
 
+									
 endmodule
