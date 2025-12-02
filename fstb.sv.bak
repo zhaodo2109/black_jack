@@ -1,0 +1,144 @@
+module fstb()
+
+    // DUT Inputs
+    logic clk;
+    logic rst;
+    logic hit;
+    logic stand;
+    logic start;
+
+    // DUT Outputs (internal signals you will want to watch)
+    // (You can probe signals inside the DUT with hierarchical paths)
+    
+    // Instantiate DUT
+    fullgame dut(
+        .clk(clk),
+        .rst(rst),
+        .hit(hit),
+        .stand(stand),
+        .start(start)
+    );
+
+    initial begin
+        clk = 0;
+        forever #50 clk = ~clk;
+    end
+
+    // Generate reset
+    task do_reset();
+        begin
+            rst = 1;
+            hit = 0;
+            stand = 0;
+            start = 0;
+            repeat (3) @(posedge clk);
+            rst = 0;
+            repeat (3) @(posedge clk);
+        end
+    endtask
+
+    // Pulse start
+    task pulse_start();
+        begin
+            @(posedge clk);
+            start = 1;
+            @(posedge clk);
+            start = 0;
+        end
+    endtask
+
+    // Pulse hit
+    task pulse_hit();
+        begin
+            @(posedge clk);
+            hit = 1;
+            @(posedge clk);
+            hit = 0;
+        end
+    endtask
+
+    // Pulse stand
+    task pulse_stand();
+        begin
+            @(posedge clk);
+            stand = 1;
+            @(posedge clk);
+            stand = 0;
+        end
+    endtask
+
+    // Wait for a card
+    task wait_for_card();
+        begin
+            wait (dut.card_ready == 1);
+            @(posedge clk); // allow card to propagate
+        end
+    endtask
+
+    // Print monitor every cycle
+    initial begin
+        $display("Starting simulation...");
+        $monitor("[%0t] state: PS=%d  DS=%d  PWIN=%0d  DWIN=%0d  TIE=%0d  bustP=%0d bustD=%0d  dealP=%0d dealD=%0d card=%h",
+            $time,
+            dut.player_sum,
+            dut.dealer_sum,
+            dut.player_win,
+            dut.dealer_win,
+            dut.tie,
+            dut.player_bust,
+            dut.dealer_bust,
+            dut.deal_player,
+            dut.deal_dealer,
+            dut.card_value
+        );
+    end
+
+    // Main Stimulus
+    initial begin
+        do_reset();
+
+        $display("=== STARTING DECK LOAD ===");
+        pulse_start();
+
+        // Wait for deck_loader to finish
+        wait (dut.load_done == 1);
+        @(posedge clk);
+
+        $display("=== INITIAL DEAL ===");
+        // FSM will deal automatically (depends on your FSM logic)
+        wait_for_card(); // player card
+        wait_for_card(); // dealer card
+        wait_for_card(); // player card
+        wait_for_card(); // dealer card
+        @(posedge clk);
+
+        $display("=== PLAYER TURN ===");
+        // Example: Player hits twice
+        pulse_hit();
+        wait_for_card();
+
+        pulse_hit();
+        wait_for_card();
+
+        // Now player stands
+        pulse_stand();
+        @(posedge clk);
+
+        $display("=== DEALER TURN / AUTO HIT ===");
+        // FSM drives dealer_auto_hit, card_draw should request cards
+        // We just wait until compare happens
+        wait (dut.compare == 1);
+        @(posedge clk);
+
+        $display("=== GAME RESULT ===");
+        if (dut.player_win)  $display("PLAYER WINS!");
+        if (dut.dealer_win)  $display("DEALER WINS!");
+        if (dut.tie)         $display("TIE GAME!");
+
+        // Wait a little and end
+        repeat (10) @(posedge clk);
+        $finish;
+    end
+
+
+endmodule

@@ -1,18 +1,27 @@
 
 State Machine - |fullgame|game_fsm:game|state
-Name state.stand_s state.hit_s state.deal state.idle state.result 
-state.idle 0 0 0 0 0 
-state.deal 0 0 1 1 0 
-state.hit_s 0 1 0 1 0 
-state.stand_s 1 0 0 1 0 
-state.result 0 0 0 1 1 
+Name state.result state.stand_s state.hit_s state.wait_d2 state.deal_dealer2 state.wait_p2 state.deal_player2 state.wait_d1 state.deal_dealer1 state.wait_p1 state.deal_player1 state.idle 
+state.idle 0 0 0 0 0 0 0 0 0 0 0 0 
+state.deal_player1 0 0 0 0 0 0 0 0 0 0 1 1 
+state.wait_p1 0 0 0 0 0 0 0 0 0 1 0 1 
+state.deal_dealer1 0 0 0 0 0 0 0 0 1 0 0 1 
+state.wait_d1 0 0 0 0 0 0 0 1 0 0 0 1 
+state.deal_player2 0 0 0 0 0 0 1 0 0 0 0 1 
+state.wait_p2 0 0 0 0 0 1 0 0 0 0 0 1 
+state.deal_dealer2 0 0 0 0 1 0 0 0 0 0 0 1 
+state.wait_d2 0 0 0 1 0 0 0 0 0 0 0 1 
+state.hit_s 0 0 1 0 0 0 0 0 0 0 0 1 
+state.stand_s 0 1 0 0 0 0 0 0 0 0 0 1 
+state.result 1 0 0 0 0 0 0 0 0 0 0 1 
 
 State Machine - |fullgame|card_draw:draw|state
-Name state.done state.check state.gen state.idle 
-state.idle 0 0 0 0 
-state.gen 0 0 1 1 
-state.check 0 1 0 1 
-state.done 1 0 0 1 
+Name state.done state.used state.check state.read_wait state.gen state.idle 
+state.idle 0 0 0 0 0 0 
+state.gen 0 0 0 0 1 1 
+state.read_wait 0 0 0 1 0 1 
+state.check 0 0 1 0 0 1 
+state.used 0 1 0 0 0 1 
+state.done 1 0 0 0 0 1 
 
 State Machine - |fullgame|deck_loader:loader|state
 Name state.idle state.done state.load 
