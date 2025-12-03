@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final
-Fri Nov 28 22:18:45 2025
+Wed Dec  3 15:02:20 2025
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 28 22:18:45 2025          ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec  3 15:02:20 2025          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; final                                          ;
 ; Top-level Entity Name              ; fullgame                                       ;
@@ -300,86 +300,89 @@ Encoding Type:  One-Hot
 +------------+------------+------------+-------------+
 
 
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+----------------------------------------+--------------------+
-; Register name                          ; Reason for Removal ;
-+----------------------------------------+--------------------+
-; game_fsm:game|state~4                  ; Lost fanout        ;
-; game_fsm:game|state~5                  ; Lost fanout        ;
-; game_fsm:game|state~6                  ; Lost fanout        ;
-; game_fsm:game|state~7                  ; Lost fanout        ;
-; card_draw:draw|state~4                 ; Lost fanout        ;
-; card_draw:draw|state~5                 ; Lost fanout        ;
-; card_draw:draw|state~6                 ; Lost fanout        ;
-; deck_loader:loader|state.load          ; Lost fanout        ;
-; card_draw:draw|state.used              ; Lost fanout        ;
-; deck_loader:loader|state.done          ; Lost fanout        ;
-; deck_loader:loader|addr[0]             ; Lost fanout        ;
-; card_draw:draw|lfsr[0..5]              ; Lost fanout        ;
-; card_draw:draw|state.idle              ; Lost fanout        ;
-; card_draw:draw|state.done              ; Lost fanout        ;
-; asyncRst_syncRst:rst_sync|syncRst      ; Lost fanout        ;
-; deck_loader:loader|state.idle          ; Lost fanout        ;
-; card_draw:draw|state.check             ; Lost fanout        ;
-; synchronizer:hit_sync|ff3              ; Lost fanout        ;
-; synchronizer:hit_sync|ff2              ; Lost fanout        ;
-; card_draw:draw|card_ready              ; Lost fanout        ;
-; game_fsm:game|state.hit_s              ; Lost fanout        ;
-; game_fsm:game|state.deal_player1       ; Lost fanout        ;
-; game_fsm:game|state.stand_s            ; Lost fanout        ;
-; card_draw:draw|req_d                   ; Lost fanout        ;
-; asyncRst_syncRst:rst_sync|iRst         ; Lost fanout        ;
-; card_draw:draw|state.read_wait         ; Lost fanout        ;
-; synchronizer:hit_sync|ff1              ; Lost fanout        ;
-; synchronizer:stand_sync|ff3            ; Lost fanout        ;
-; synchronizer:stand_sync|ff2            ; Lost fanout        ;
-; game_fsm:game|state.wait_d2            ; Lost fanout        ;
-; game_fsm:game|state.idle               ; Lost fanout        ;
-; card_draw:draw|card_data_out[0]        ; Lost fanout        ;
-; alu_logic:datapath|card_ready_d        ; Lost fanout        ;
-; alu_logic:datapath|pending_dealer      ; Lost fanout        ;
-; card_draw:draw|card_data_out[1..3]     ; Lost fanout        ;
-; card_draw:draw|state.gen               ; Lost fanout        ;
-; synchronizer:stand_sync|ff1            ; Lost fanout        ;
-; game_fsm:game|state.result             ; Lost fanout        ;
-; game_fsm:game|state.deal_player2       ; Lost fanout        ;
-; game_fsm:game|state.deal_dealer1       ; Lost fanout        ;
-; game_fsm:game|state.deal_dealer2       ; Lost fanout        ;
-; game_fsm:game|state.wait_d1            ; Lost fanout        ;
-; game_fsm:game|state.wait_p1            ; Lost fanout        ;
-; game_fsm:game|state.wait_p2            ; Lost fanout        ;
-; deck_loader:loader|addr[1..5]          ; Lost fanout        ;
-; alu_logic:datapath|dealer_sum[0..5]    ; Lost fanout        ;
-; Total Number of Removed Registers = 62 ;                    ;
-+----------------------------------------+--------------------+
++----------------------------------------------------------------+
+; Registers Removed During Synthesis                             ;
++-------------------------------------------+--------------------+
+; Register name                             ; Reason for Removal ;
++-------------------------------------------+--------------------+
+; game_fsm:game|state~4                     ; Lost fanout        ;
+; game_fsm:game|state~5                     ; Lost fanout        ;
+; game_fsm:game|state~6                     ; Lost fanout        ;
+; game_fsm:game|state~7                     ; Lost fanout        ;
+; card_draw:draw|state~4                    ; Lost fanout        ;
+; card_draw:draw|state~5                    ; Lost fanout        ;
+; card_draw:draw|state~6                    ; Lost fanout        ;
+; deck_loader:loader|state.load             ; Lost fanout        ;
+; card_draw:draw|state.used                 ; Lost fanout        ;
+; deck_loader:loader|state.done             ; Lost fanout        ;
+; deck_loader:loader|addr[0]                ; Lost fanout        ;
+; card_draw:draw|lfsr[0..5]                 ; Lost fanout        ;
+; card_draw:draw|state.idle                 ; Lost fanout        ;
+; card_draw:draw|state.done                 ; Lost fanout        ;
+; asyncRst_syncRst:rst_sync|syncRst         ; Lost fanout        ;
+; deck_loader:loader|state.idle             ; Lost fanout        ;
+; card_draw:draw|state.check                ; Lost fanout        ;
+; synchronizer:hit_sync|ff3                 ; Lost fanout        ;
+; synchronizer:hit_sync|ff2                 ; Lost fanout        ;
+; card_draw:draw|card_ready                 ; Lost fanout        ;
+; game_fsm:game|state.hit_s                 ; Lost fanout        ;
+; game_fsm:game|state.deal_player1          ; Lost fanout        ;
+; game_fsm:game|state.stand_s               ; Lost fanout        ;
+; asyncRst_syncRst:rst_sync|iRst            ; Lost fanout        ;
+; card_draw:draw|state.read_wait            ; Lost fanout        ;
+; synchronizer:hit_sync|ff1                 ; Lost fanout        ;
+; synchronizer:stand_sync|ff3               ; Lost fanout        ;
+; synchronizer:stand_sync|ff2               ; Lost fanout        ;
+; game_fsm:game|state.wait_d2               ; Lost fanout        ;
+; game_fsm:game|state.idle                  ; Lost fanout        ;
+; card_draw:draw|card_data_out[0]           ; Lost fanout        ;
+; alu_logic:datapath|card_ready_d           ; Lost fanout        ;
+; alu_logic:datapath|pending_dealer         ; Lost fanout        ;
+; card_draw:draw|card_data_out[1..3]        ; Lost fanout        ;
+; alu_logic:datapath|dealer_card_count[1,2] ; Lost fanout        ;
+; card_draw:draw|state.gen                  ; Lost fanout        ;
+; synchronizer:stand_sync|ff1               ; Lost fanout        ;
+; game_fsm:game|state.result                ; Lost fanout        ;
+; alu_logic:datapath|dealer_card_count[0]   ; Lost fanout        ;
+; game_fsm:game|state.deal_player2          ; Lost fanout        ;
+; game_fsm:game|state.deal_dealer1          ; Lost fanout        ;
+; game_fsm:game|state.deal_dealer2          ; Lost fanout        ;
+; game_fsm:game|state.wait_d1               ; Lost fanout        ;
+; game_fsm:game|state.wait_p1               ; Lost fanout        ;
+; game_fsm:game|state.wait_p2               ; Lost fanout        ;
+; deck_loader:loader|addr[1..5]             ; Lost fanout        ;
+; alu_logic:datapath|dealer_sum[0..5]       ; Lost fanout        ;
+; Total Number of Removed Registers = 64    ;                    ;
++-------------------------------------------+--------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                              ;
-+-----------------------------+--------------------+---------------------------------------------------------------------------------------+
-; Register name               ; Reason for Removal ; Registers Removed due to This Register                                                ;
-+-----------------------------+--------------------+---------------------------------------------------------------------------------------+
-; card_draw:draw|lfsr[5]      ; Lost Fanouts       ; card_draw:draw|lfsr[4], card_draw:draw|lfsr[3], card_draw:draw|lfsr[2],               ;
-;                             ;                    ; card_draw:draw|lfsr[1], card_draw:draw|lfsr[0], card_draw:draw|state.idle,            ;
-;                             ;                    ; card_draw:draw|state.done, synchronizer:hit_sync|ff3, synchronizer:hit_sync|ff2,      ;
-;                             ;                    ; game_fsm:game|state.hit_s, game_fsm:game|state.deal_player1,                          ;
-;                             ;                    ; synchronizer:hit_sync|ff1, synchronizer:stand_sync|ff3, synchronizer:stand_sync|ff2,  ;
-;                             ;                    ; game_fsm:game|state.wait_d2, game_fsm:game|state.idle, synchronizer:stand_sync|ff1,   ;
-;                             ;                    ; game_fsm:game|state.result, game_fsm:game|state.deal_player2,                         ;
-;                             ;                    ; game_fsm:game|state.deal_dealer1, game_fsm:game|state.deal_dealer2                    ;
-; card_draw:draw|state~6      ; Lost Fanouts       ; deck_loader:loader|state.load, deck_loader:loader|addr[0],                            ;
-;                             ;                    ; deck_loader:loader|state.idle, deck_loader:loader|addr[1],                            ;
-;                             ;                    ; deck_loader:loader|addr[2], deck_loader:loader|addr[3], deck_loader:loader|addr[4],   ;
-;                             ;                    ; deck_loader:loader|addr[5]                                                            ;
-; card_draw:draw|state~4      ; Lost Fanouts       ; card_draw:draw|state.used, deck_loader:loader|state.done, card_draw:draw|state.check, ;
-;                             ;                    ; card_draw:draw|req_d, card_draw:draw|state.read_wait                                  ;
-; game_fsm:game|state.stand_s ; Lost Fanouts       ; alu_logic:datapath|dealer_sum[1], alu_logic:datapath|dealer_sum[3],                   ;
-;                             ;                    ; alu_logic:datapath|dealer_sum[4], alu_logic:datapath|dealer_sum[5]                    ;
-; game_fsm:game|state~4       ; Lost Fanouts       ; asyncRst_syncRst:rst_sync|syncRst, card_draw:draw|card_ready,                         ;
-;                             ;                    ; asyncRst_syncRst:rst_sync|iRst                                                        ;
-; card_draw:draw|state~5      ; Lost Fanouts       ; card_draw:draw|state.gen                                                              ;
-+-----------------------------+--------------------+---------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                          ;
++-----------------------------------------+--------------------+---------------------------------------------------------------------------------------+
+; Register name                           ; Reason for Removal ; Registers Removed due to This Register                                                ;
++-----------------------------------------+--------------------+---------------------------------------------------------------------------------------+
+; card_draw:draw|state.idle               ; Lost Fanouts       ; card_draw:draw|state.done, synchronizer:hit_sync|ff3, synchronizer:hit_sync|ff2,      ;
+;                                         ;                    ; game_fsm:game|state.hit_s, game_fsm:game|state.deal_player1,                          ;
+;                                         ;                    ; game_fsm:game|state.stand_s, synchronizer:hit_sync|ff1, synchronizer:stand_sync|ff3,  ;
+;                                         ;                    ; synchronizer:stand_sync|ff2, game_fsm:game|state.wait_d2, game_fsm:game|state.idle,   ;
+;                                         ;                    ; synchronizer:stand_sync|ff1, game_fsm:game|state.result,                              ;
+;                                         ;                    ; game_fsm:game|state.deal_player2, game_fsm:game|state.deal_dealer1,                   ;
+;                                         ;                    ; game_fsm:game|state.deal_dealer2, alu_logic:datapath|dealer_sum[1],                   ;
+;                                         ;                    ; alu_logic:datapath|dealer_sum[3], alu_logic:datapath|dealer_sum[4],                   ;
+;                                         ;                    ; alu_logic:datapath|dealer_sum[5]                                                      ;
+; card_draw:draw|state~6                  ; Lost Fanouts       ; deck_loader:loader|state.load, deck_loader:loader|addr[0],                            ;
+;                                         ;                    ; deck_loader:loader|state.idle, deck_loader:loader|addr[1],                            ;
+;                                         ;                    ; deck_loader:loader|addr[2], deck_loader:loader|addr[3], deck_loader:loader|addr[4],   ;
+;                                         ;                    ; deck_loader:loader|addr[5]                                                            ;
+; card_draw:draw|lfsr[5]                  ; Lost Fanouts       ; card_draw:draw|lfsr[4], card_draw:draw|lfsr[3], card_draw:draw|lfsr[2],               ;
+;                                         ;                    ; card_draw:draw|lfsr[1], card_draw:draw|lfsr[0]                                        ;
+; card_draw:draw|state~4                  ; Lost Fanouts       ; card_draw:draw|state.used, deck_loader:loader|state.done, card_draw:draw|state.check, ;
+;                                         ;                    ; card_draw:draw|state.read_wait                                                        ;
+; game_fsm:game|state~4                   ; Lost Fanouts       ; asyncRst_syncRst:rst_sync|syncRst, card_draw:draw|card_ready,                         ;
+;                                         ;                    ; asyncRst_syncRst:rst_sync|iRst                                                        ;
+; alu_logic:datapath|dealer_card_count[2] ; Lost Fanouts       ; alu_logic:datapath|dealer_card_count[1], alu_logic:datapath|dealer_card_count[0]      ;
+; card_draw:draw|state~5                  ; Lost Fanouts       ; card_draw:draw|state.gen                                                              ;
++-----------------------------------------+--------------------+---------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -406,17 +409,17 @@ Encoding Type:  One-Hot
 +---------------------------------+-----------------------------+------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |fullgame|alu_logic:datapath|dealer_sum[0] ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |fullgame|mem_in[5]                        ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |fullgame|mem_addr[0]                      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |fullgame|deck_loader:loader|Selector1     ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |fullgame|game_fsm:game|Selector1          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |fullgame|alu_logic:datapath|dealer_card_count[0] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |fullgame|mem_in[1]                               ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |fullgame|mem_addr[0]                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |fullgame|deck_loader:loader|Selector0            ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |fullgame|game_fsm:game|Selector1                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -599,7 +602,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Fri Nov 28 22:18:39 2025
+    Info: Processing started: Wed Dec  3 15:02:14 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final -c final
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 32 processors detected
@@ -624,24 +627,24 @@ Info (12021): Found 1 design units, including 1 entities, in source file deck_lo
 Info (12021): Found 1 design units, including 1 entities, in source file alu_logic.sv
     Info (12023): Found entity 1: alu_logic File: D:/School/ECPE/ECPE174/final_project/alu_logic.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file card_draw.sv
-    Info (12023): Found entity 1: card_draw File: D:/School/ECPE/ECPE174/final_project/card_draw.sv Line: 196
+    Info (12023): Found entity 1: card_draw File: D:/School/ECPE/ECPE174/final_project/card_draw.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pord_disp.sv
     Info (12023): Found entity 1: PorD_disp File: D:/School/ECPE/ECPE174/final_project/PorD_disp.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fullgame.sv
     Info (12023): Found entity 1: fullgame File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fstb.sv
-    Info (12023): Found entity 1: fstb File: D:/School/ECPE/ECPE174/final_project/fstb.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at fullgame.sv(58): created implicit net for "deck_read_en" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 58
+    Info (12023): Found entity 1: fstb File: D:/School/ECPE/ECPE174/final_project/fstb.sv Line: 146
 Info (12127): Elaborating entity "fullgame" for the top level hierarchy
-Info (12128): Elaborating entity "synchronizer" for hierarchy "synchronizer:hit_sync" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 39
-Info (12128): Elaborating entity "asyncRst_syncRst" for hierarchy "asyncRst_syncRst:rst_sync" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 42
-Info (12128): Elaborating entity "deck_loader" for hierarchy "deck_loader:loader" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 52
+Info (12128): Elaborating entity "synchronizer" for hierarchy "synchronizer:hit_sync" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 38
+Info (12128): Elaborating entity "asyncRst_syncRst" for hierarchy "asyncRst_syncRst:rst_sync" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 41
+Info (12128): Elaborating entity "deck_loader" for hierarchy "deck_loader:loader" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 51
 Warning (10230): Verilog HDL assignment warning at deck_loader.sv(30): truncated value with size 32 to match size of target (6) File: D:/School/ECPE/ECPE174/final_project/deck_loader.sv Line: 30
 Info (12128): Elaborating entity "deck_lookup" for hierarchy "deck_loader:loader|deck_lookup:rom" File: D:/School/ECPE/ECPE174/final_project/deck_loader.sv Line: 17
 Info (12128): Elaborating entity "card_draw" for hierarchy "card_draw:draw" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 64
 Info (12128): Elaborating entity "deck_memory" for hierarchy "deck_memory:bram" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 76
 Info (12128): Elaborating entity "game_fsm" for hierarchy "game_fsm:game" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 95
 Info (12128): Elaborating entity "alu_logic" for hierarchy "alu_logic:datapath" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 114
+Warning (10036): Verilog HDL or VHDL warning at alu_logic.sv(130): object "dealer_wait" assigned a value but never read File: D:/School/ECPE/ECPE174/final_project/alu_logic.sv Line: 130
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "deck_loader:loader|deck_lookup:rom|Ram0" is uninferred due to inappropriate RAM size File: D:/School/ECPE/ECPE174/final_project/deck_lookup.sv Line: 12
 Info (19000): Inferred 1 megafunctions from design logic
@@ -657,7 +660,7 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "card_draw:draw|Mod0" File: D:/School/ECPE/ECPE174/final_project/card_draw.sv Line: 253
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "card_draw:draw|Mod0" File: D:/School/ECPE/ECPE174/final_project/card_draw.sv Line: 23
 Info (12130): Elaborated megafunction instantiation "deck_memory:bram|altsyncram:deck_rtl_0"
 Info (12133): Instantiated megafunction "deck_memory:bram|altsyncram:deck_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "SINGLE_PORT"
@@ -672,8 +675,8 @@ Info (12133): Instantiated megafunction "deck_memory:bram|altsyncram:deck_rtl_0"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_la81.tdf
     Info (12023): Found entity 1: altsyncram_la81 File: D:/School/ECPE/ECPE174/final_project/db/altsyncram_la81.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "card_draw:draw|lpm_divide:Mod0" File: D:/School/ECPE/ECPE174/final_project/card_draw.sv Line: 253
-Info (12133): Instantiated megafunction "card_draw:draw|lpm_divide:Mod0" with the following parameter: File: D:/School/ECPE/ECPE174/final_project/card_draw.sv Line: 253
+Info (12130): Elaborated megafunction instantiation "card_draw:draw|lpm_divide:Mod0" File: D:/School/ECPE/ECPE174/final_project/card_draw.sv Line: 23
+Info (12133): Instantiated megafunction "card_draw:draw|lpm_divide:Mod0" with the following parameter: File: D:/School/ECPE/ECPE174/final_project/card_draw.sv Line: 23
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -697,7 +700,7 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated|ram_block1a4" File: D:/School/ECPE/ECPE174/final_project/db/altsyncram_la81.tdf Line: 121
         Warning (14320): Synthesized away node "deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated|ram_block1a5" File: D:/School/ECPE/ECPE174/final_project/db/altsyncram_la81.tdf Line: 142
         Warning (14320): Synthesized away node "deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated|ram_block1a6" File: D:/School/ECPE/ECPE174/final_project/db/altsyncram_la81.tdf Line: 163
-Info (17049): 62 registers lost all their fanouts during netlist optimizations.
+Info (17049): 64 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 5 input pin(s) that do not drive logic
@@ -711,8 +714,8 @@ Info (21057): Implemented 5 device resources after synthesis - the final resourc
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
     Info: Peak virtual memory: 4772 megabytes
-    Info: Processing ended: Fri Nov 28 22:18:45 2025
+    Info: Processing ended: Wed Dec  3 15:02:20 2025
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:16
 
 

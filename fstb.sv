@@ -245,10 +245,8 @@ module fstb;
              dut.player_bust, dut.dealer_bust,
              dut.player_win, dut.dealer_win, dut.tie);
   end
+/*
 
-  // ----------------------------------------
-  // ADDITIONAL DEBUG MONITOR (internal FSM + signals)
-  // ----------------------------------------
   always @(posedge clk) begin
     $display("[%0t] dealP=%b dealD=%b | card_value=%0d | card_draw.state=%s | rand_idx=%0d | card_ready=%b",
              $time,
@@ -259,7 +257,7 @@ module fstb;
              dut.draw.rand_index,
              dut.card_ready);
   end
-
+*/
   // ----------------------------------------
   // Main test sequence
   // ----------------------------------------
@@ -306,6 +304,8 @@ module fstb;
              dut.player_bust, dut.dealer_bust,
              dut.player_win, dut.dealer_win, dut.tie);
 				 
+	rst = 1;
+    #200;
 				 
 	press_start;
 	press_start;

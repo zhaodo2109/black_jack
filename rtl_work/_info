@@ -1,15 +1,7 @@
 m255
 K4
 z2
-Z0 !s99 nomlopt
-R0
-R0
-R0
-R0
-R0
-R0
-R0
-R0
+!s99 nomlopt
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -17,305 +9,304 @@ R0
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dD:/School/ECPE/ECPE174/final_project
+Z0 dD:/School/ECPE/ECPE174/final_project
 T_opt
-!s110 1764572699
-Vdek3i_H>17WVm[<Lzm?L20
+!s110 1764802978
+V7Y2Mn6GaAkYl=1IZ<Hgn60
 04 4 4 work fstb fast 0
-=1-58020512d5e2-692d3e1a-35b-770c
+=1-58020512d5e2-6930c1a2-32-e638
 !s124 OEM10U11 
 o-quiet -auto_acc_if_foreign -work work +acc
-Z2 tCvgOpt 0
+Z1 tCvgOpt 0
 n@_opt
 OL;O;2021.2;73
-R1
 vadder6
-Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z4 !s110 1764572749
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1764802976
 !i10b 1
 !s100 LeUIFW0e=1B?og`>;W1o_2
 Ieg`M]Fb67d2h=_VP9nGPI1
 S1
-R1
+R0
 w1763596384
 8D:/School/ECPE/ECPE174/final_project/adder6.sv
 FD:/School/ECPE/ECPE174/final_project/adder6.sv
 !i122 4
 L0 1 27
-Z5 VDg1SIo80bB@j0V0VzS_@n1
-Z6 OL;L;2021.2;73
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.2;73
 r1
 !s85 0
 31
-Z7 !s108 1764572749.000000
+Z6 !s108 1764802976.000000
 !s107 D:/School/ECPE/ECPE174/final_project/adder6.sv|
 !s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/adder6.sv|
 !i113 0
-Z8 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
+Z7 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
 valu_logic
+R2
 R3
-R4
 !i10b 1
 !s100 4`B>`S3>47`>Si3f1[fW70
 I<kfZVa5HJR`6:Po8Adf0m1
 S1
-R1
+R0
 w1764570697
 8D:/School/ECPE/ECPE174/final_project/alu_logic.sv
 FD:/School/ECPE/ECPE174/final_project/alu_logic.sv
 !i122 5
 L0 1 204
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
+R6
 !s107 D:/School/ECPE/ECPE174/final_project/alu_logic.sv|
 !s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/alu_logic.sv|
 !i113 0
-R8
-R2
+R7
+R1
 vasyncRst_syncRst
-R3
-Z9 !s110 1764572750
+R2
+Z8 !s110 1764802977
 !i10b 1
 !s100 >`diZNi@ihNY4@CC0GX_P0
 IWgjHVVb?Mj@GjZ7LGOoAH2
 S1
-R1
+R0
 w1763596013
 8D:/School/ECPE/ECPE174/final_project/asyncRst_syncRst.sv
 FD:/School/ECPE/ECPE174/final_project/asyncRst_syncRst.sv
 !i122 10
-Z10 L0 1 16
+Z9 L0 1 16
+R4
 R5
-R6
 r1
 !s85 0
 31
-Z11 !s108 1764572750.000000
+Z10 !s108 1764802977.000000
 !s107 D:/School/ECPE/ECPE174/final_project/asyncRst_syncRst.sv|
 !s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/asyncRst_syncRst.sv|
 !i113 0
-R8
-R2
+R7
+R1
 nasync@rst_sync@rst
 vcard_draw
+R2
 R3
-R4
 !i10b 1
 !s100 l2:nO2a<Kz8d<i54I[LC_0
 ITZMJ6?J@MC4XDkz@4Ez2E2
 S1
-R1
+R0
 w1764565003
 8D:/School/ECPE/ECPE174/final_project/card_draw.sv
 FD:/School/ECPE/ECPE174/final_project/card_draw.sv
 !i122 6
 L0 1 95
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
+R6
 !s107 D:/School/ECPE/ECPE174/final_project/card_draw.sv|
 !s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/card_draw.sv|
 !i113 0
-R8
-R2
+R7
+R1
 vdeck_loader
+R2
 R3
-R4
 !i10b 1
 !s100 M6F8Z;Jm7Ae6T9]]MY`R:2
 ITYC5X8C:aV8RgG6Zf4E?_0
 S1
-R1
+R0
 w1764206018
 8D:/School/ECPE/ECPE174/final_project/deck_loader.sv
 FD:/School/ECPE/ECPE174/final_project/deck_loader.sv
 !i122 3
 L0 1 63
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
+R6
 !s107 D:/School/ECPE/ECPE174/final_project/deck_loader.sv|
 !s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/deck_loader.sv|
 !i113 0
-R8
-R2
+R7
+R1
 vdeck_lookup
+R2
 R3
-R4
 !i10b 1
 !s100 :kdG=d1;@1D6>IORlT]OR1
 I:PO35PY8W_6[Xh>@R4SmU3
 S1
-R1
+R0
 w1762556200
 8D:/School/ECPE/ECPE174/final_project/deck_lookup.sv
 FD:/School/ECPE/ECPE174/final_project/deck_lookup.sv
 !i122 2
 L0 1 78
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
+R6
 !s107 D:/School/ECPE/ECPE174/final_project/deck_lookup.sv|
 !s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/deck_lookup.sv|
 !i113 0
-R8
-R2
+R7
+R1
 vdeck_memory
+R2
 R3
-R4
 !i10b 1
 !s100 ^IR:`E@>>Y2eTQWHzZZ_o0
 I^c6m3Td7N4IJ;Ud4l7SNH3
 S1
-R1
+R0
 w1764380530
 8D:/School/ECPE/ECPE174/final_project/deck_memory.sv
 FD:/School/ECPE/ECPE174/final_project/deck_memory.sv
 !i122 1
-R10
+R9
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
+R6
 !s107 D:/School/ECPE/ECPE174/final_project/deck_memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/deck_memory.sv|
 !i113 0
-R8
-R2
-vfstb
-R3
-R9
-!i10b 1
-!s100 EK`P^F5HQK0`Zo>2J]6k72
-I:O?]0oHJOC5:ha>nD2_<?1
-S1
+R7
 R1
-w1764572692
+vfstb
+R2
+R8
+!i10b 1
+!s100 DMCn6Y6Ecc^Po1B7O@?0m1
+IUMVL416Z]S<_=M`A:T0Xh3
+S1
+R0
+w1764802931
 8D:/School/ECPE/ECPE174/final_project/fstb.sv
 FD:/School/ECPE/ECPE174/final_project/fstb.sv
 !i122 11
-L0 146 169
+L0 146 172
+R4
 R5
-R6
 r1
 !s85 0
 31
-R11
+R10
 !s107 D:/School/ECPE/ECPE174/final_project/fstb.sv|
 !s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/fstb.sv|
 !i113 0
-R8
-R2
-vfullgame
-R3
-R4
-!i10b 1
-!s100 cj3DK33cXP7zBh7MZhYNn3
-IPS`mS6eCjn:izKgZhj=O30
-S1
+R7
 R1
-w1764570130
+vfullgame
+R2
+R8
+!i10b 1
+!s100 dCoiFMB2jYnM:l2[965KQ2
+IOaWf2hZP3A>i]_3MHNhE?0
+S1
+R0
+w1764802809
 8D:/School/ECPE/ECPE174/final_project/fullgame.sv
 FD:/School/ECPE/ECPE174/final_project/fullgame.sv
 !i122 8
 L0 1 117
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
+R10
 !s107 D:/School/ECPE/ECPE174/final_project/fullgame.sv|
 !s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/fullgame.sv|
 !i113 0
-R8
-R2
+R7
+R1
 vgame_fsm
-R3
-R9
+R2
+R8
 !i10b 1
 !s100 V6EhQ9Q=Fc]K_DoBPSSSF2
 I[TVj89i_^EP6hTVEjlAz<1
 S1
-R1
+R0
 w1764572596
 8D:/School/ECPE/ECPE174/final_project/game_fsm.sv
 FD:/School/ECPE/ECPE174/final_project/game_fsm.sv
 !i122 9
 L0 79 175
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
+R10
 !s107 D:/School/ECPE/ECPE174/final_project/game_fsm.sv|
 !s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/game_fsm.sv|
 !i113 0
-R8
-R2
+R7
+R1
 vPorD_disp
-R3
-R4
+R2
+R8
 !i10b 1
 !s100 oQ=2ae@2hU_O]ZATNcfX?0
 IQ^>GNfjBR<om2ol`Vambn1
 S1
-R1
+R0
 w1763603531
 8D:/School/ECPE/ECPE174/final_project/PorD_disp.sv
 FD:/School/ECPE/ECPE174/final_project/PorD_disp.sv
 !i122 7
 L0 1 39
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
+R6
 !s107 D:/School/ECPE/ECPE174/final_project/PorD_disp.sv|
 !s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/PorD_disp.sv|
 !i113 0
-R8
-R2
+R7
+R1
 n@por@d_disp
 vsynchronizer
+R2
 R3
-R4
 !i10b 1
 !s100 :f<AAR1idW;3@cDGnakU]3
 Inn1=8>CEEhO]_FV`ICW<Z0
 S1
-R1
+R0
 w1763596061
 8D:/School/ECPE/ECPE174/final_project/synchronizer.sv
 FD:/School/ECPE/ECPE174/final_project/synchronizer.sv
 !i122 0
 L0 1 13
+R4
 R5
-R6
 r1
 !s85 0
 31
-R7
+R6
 !s107 D:/School/ECPE/ECPE174/final_project/synchronizer.sv|
 !s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/synchronizer.sv|
 !i113 0
-R8
-R2
+R7
+R1

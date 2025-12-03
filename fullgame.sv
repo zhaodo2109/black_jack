@@ -8,7 +8,7 @@ module fullgame(input logic clk, input logic rst, input logic hit, input logic s
 	
 	logic load_done;
    logic [5:0] mem_addr;
-   logic mem_wen;
+   logic mem_wen,deck_read_en;
    logic [6:0] mem_in, mem_out;
 	 
 
