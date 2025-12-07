@@ -1,0 +1,20 @@
+﻿# Ignore build/generated files and local tool artifacts
+db/
+output_files/
+rtl_work/
+incremental_db/
+simulation/
+*.wlf
+*.qdb
+*.cdb
+*.hdb
+*.tdb
+*.rpt
+*.sof
+*.jdi
+*.ammdb
+*.rdr.flock
+*.flock
+# local editor/OS files
+Thumbs.db
+.DS_Store
