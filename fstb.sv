@@ -145,9 +145,7 @@ endmodule
 
 module fstb;
 
-  // ----------------------------------------
   // Signals
-  // ----------------------------------------
   logic clk, rst;
   logic start, hit, stand;
 
@@ -160,14 +158,10 @@ module fstb;
     .start(start)
   );
 
-  // ----------------------------------------
   // Clock
-  // ----------------------------------------
   always #50 clk = ~clk; // 100ns period
 
-  // ----------------------------------------
   // Simple button press tasks
-  // ----------------------------------------
   task press_start;
     $display("[%0t] >>> START pressed", $time);
     start = 1; #100; start = 0;
@@ -183,9 +177,7 @@ module fstb;
     stand = 1; #100; stand = 0;
   endtask
 
-  // ----------------------------------------
   // Decode card name (helper)
-  // ----------------------------------------
   function string card_name(input [6:0] c);
     string suit, rank;
     int v;
@@ -217,9 +209,7 @@ module fstb;
     return {rank, suit};
   endfunction
 
-  // ----------------------------------------
   // Monitor card draw events
-  // ----------------------------------------
   always @(posedge dut.card_ready) begin
     $display("[%0t] CARD DRAWN -> %s (raw=%b)",
              $time, card_name(dut.card_data_out), dut.card_data_out);
@@ -232,9 +222,7 @@ module fstb;
   always @(posedge dut.deal_dealer)
     $display("[%0t] DEALER requested a card", $time);
 
-  // ----------------------------------------
   // Display main signals every change
-  // ----------------------------------------
   initial begin
     $display("------------------------------------------------");
     $display("        BLACKJACK FULLGAME TESTBENCH STARTED     ");
@@ -258,9 +246,7 @@ module fstb;
              dut.card_ready);
   end
 */
-  // ----------------------------------------
   // Main test sequence
-  // ----------------------------------------
   initial begin
     clk   = 0;
     rst   = 0;
