@@ -245,10 +245,8 @@ module fstb;
              dut.player_bust, dut.dealer_bust,
              dut.player_win, dut.dealer_win, dut.tie);
   end
+/*
 
-  // ----------------------------------------
-  // ADDITIONAL DEBUG MONITOR (internal FSM + signals)
-  // ----------------------------------------
   always @(posedge clk) begin
     $display("[%0t] dealP=%b dealD=%b | card_value=%0d | card_draw.state=%s | rand_idx=%0d | card_ready=%b",
              $time,
@@ -259,7 +257,7 @@ module fstb;
              dut.draw.rand_index,
              dut.card_ready);
   end
-
+*/
   // ----------------------------------------
   // Main test sequence
   // ----------------------------------------
@@ -296,21 +294,6 @@ module fstb;
 		$display("Winner is: DEALER");
 	 else if (dut.tie==1)
 	   $display("TIE");
-		
-		
-	 // Round 2
-    
-	 $monitor("[%0t] player_sum=%0d dealer_sum=%0d | bust_p=%b bust_d=%b | win_p=%b win_d=%b tie=%b",
-             $time,
-             dut.player_sum, dut.dealer_sum,
-             dut.player_bust, dut.dealer_bust,
-             dut.player_win, dut.dealer_win, dut.tie);
-				 
-				 
-	press_start;
-	press_start;
-	
-	
 	
   end
 

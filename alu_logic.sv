@@ -18,9 +18,7 @@ module alu_logic(
     input  logic stand_active
 );
 
-    // ------------------------------------------------
     // Rising edge detector for card_ready
-    // ------------------------------------------------
     logic card_ready_d;
     wire  card_ready_pulse;
 
@@ -34,9 +32,7 @@ module alu_logic(
     assign card_ready_pulse = card_ready & ~card_ready_d;
 
 
-    // ------------------------------------------------
     // Remember who requested the card
-    // ------------------------------------------------
     logic pending_player, pending_dealer;
 
     always_ff @(posedge clk or negedge rst) begin
@@ -86,9 +82,7 @@ module alu_logic(
 	end
 
 
-    // ------------------------------------------------
     // Player and dealer sums
-    // ------------------------------------------------
     always_ff @(posedge clk or negedge rst) begin
         if (!rst) begin
 				player_sum <= 6'd0;
@@ -120,9 +114,7 @@ module alu_logic(
     end
 
 
-    // ------------------------------------------------
     // Flags and compare logic
-    // ------------------------------------------------
     assign player_bust = (player_sum > 6'd21);
     assign dealer_bust = (dealer_sum > 6'd21);
 	 

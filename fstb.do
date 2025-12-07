@@ -18,6 +18,10 @@ vlog -sv -work work [pwd]/PorD_disp.sv
 vlog -sv -work work [pwd]/fullgame.sv
 vlog -sv -work work [pwd]/game_fsm.sv
 vlog -sv -work work [pwd]/asyncRst_syncRst.sv
+vlog -sv -work work [pwd]/display.sv
+vlog -sv -work work [pwd]/display10.sv
+vlog -sv -work work [pwd]/dealer_hand.sv
+vlog -sv -work work [pwd]/player_hand.sv
 vlog -sv -work work [pwd]/fstb.sv
 
 
@@ -45,8 +49,8 @@ view signals
 
 ### ---------------------------------------------- ###
 ### Edit run time ###
-#run 13950ns
-run 50000ns
+run 13950ns
+#run 50000ns
 
 ### ---------------------------------------------- ###
 ### Will create large wave window and zoom to show all signals

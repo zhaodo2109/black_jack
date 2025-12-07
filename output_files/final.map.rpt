@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final
-Fri Nov 28 22:18:45 2025
+Fri Dec  5 13:46:07 2025
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -13,25 +13,28 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |fullgame|game_fsm:game|state
-  9. State Machine - |fullgame|card_draw:draw|state
- 10. State Machine - |fullgame|deck_loader:loader|state
- 11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |fullgame|game_fsm:game|state
+ 10. State Machine - |fullgame|card_draw:draw|state
+ 11. State Machine - |fullgame|deck_loader:loader|state
+ 12. Registers Removed During Synthesis
  13. General Register Statistics
- 14. Registers Packed Into Inferred Megafunctions
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated
- 17. Parameter Settings for Inferred Entity Instance: deck_memory:bram|altsyncram:deck_rtl_0
- 18. Parameter Settings for Inferred Entity Instance: card_draw:draw|lpm_divide:Mod0
- 19. altsyncram Parameter Settings by Entity Instance
- 20. Port Connectivity Checks: "alu_logic:datapath"
- 21. Port Connectivity Checks: "card_draw:draw"
- 22. Port Connectivity Checks: "synchronizer:stand_sync"
- 23. Port Connectivity Checks: "synchronizer:hit_sync"
- 24. Post-Synthesis Netlist Statistics for Top Partition
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
+ 14. Inverted Register Statistics
+ 15. Registers Packed Into Inferred Megafunctions
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated
+ 18. Parameter Settings for Inferred Entity Instance: deck_memory:bram|altsyncram:deck_rtl_0
+ 19. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 20. Parameter Settings for Inferred Entity Instance: card_draw:draw|lpm_divide:Mod0
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. Port Connectivity Checks: "display:disp_p0"
+ 23. Port Connectivity Checks: "alu_logic:datapath"
+ 24. Port Connectivity Checks: "card_draw:draw"
+ 25. Port Connectivity Checks: "synchronizer:stand_sync"
+ 26. Port Connectivity Checks: "synchronizer:hit_sync"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
 
 
 
@@ -58,18 +61,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 28 22:18:45 2025          ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec  5 13:46:07 2025          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; final                                          ;
 ; Top-level Entity Name              ; fullgame                                       ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 0                                              ;
-;     Total combinational functions  ; 0                                              ;
-;     Dedicated logic registers      ; 0                                              ;
-; Total registers                    ; 0                                              ;
-; Total pins                         ; 5                                              ;
+; Total logic elements               ; 292                                            ;
+;     Total combinational functions  ; 269                                            ;
+;     Dedicated logic registers      ; 104                                            ;
+; Total registers                    ; 104                                            ;
+; Total pins                         ; 55                                             ;
 ; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
+; Total memory bits                  ; 364                                            ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
 ; Total PLLs                         ; 0                                              ;
 +------------------------------------+------------------------------------------------+
@@ -80,6 +83,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                            ; fullgame           ; final              ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -169,87 +173,125 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
-; deck_memory.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_project/deck_memory.sv              ;         ;
-; deck_lookup.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_project/deck_lookup.sv              ;         ;
-; asyncRst_syncRst.sv              ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_project/asyncRst_syncRst.sv         ;         ;
-; synchronizer.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_project/synchronizer.sv             ;         ;
-; game_fsm.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_project/game_fsm.sv                 ;         ;
-; deck_loader.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_project/deck_loader.sv              ;         ;
-; alu_logic.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_project/alu_logic.sv                ;         ;
-; card_draw.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_project/card_draw.sv                ;         ;
-; fullgame.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_project/fullgame.sv                 ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal221.inc                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/aglobal221.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_la81.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_project/db/altsyncram_la81.tdf      ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_m9m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_project/db/lpm_divide_m9m.tdf       ;         ;
-; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_project/db/sign_div_unsign_bkh.tdf  ;         ;
-; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_project/db/alt_u_div_a4f.tdf        ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_project/db/add_sub_7pc.tdf          ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_project/db/add_sub_8pc.tdf          ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
+; clockdiv.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_final_project/final_project/clockdiv.sv                ;         ;
+; deck_memory.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_final_project/final_project/deck_memory.sv             ;         ;
+; deck_lookup.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_final_project/final_project/deck_lookup.sv             ;         ;
+; asyncRst_syncRst.sv              ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_final_project/final_project/asyncRst_syncRst.sv        ;         ;
+; synchronizer.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_final_project/final_project/synchronizer.sv            ;         ;
+; game_fsm.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_final_project/final_project/game_fsm.sv                ;         ;
+; deck_loader.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_final_project/final_project/deck_loader.sv             ;         ;
+; alu_logic.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_final_project/final_project/alu_logic.sv               ;         ;
+; card_draw.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_final_project/final_project/card_draw.sv               ;         ;
+; fullgame.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv                ;         ;
+; display.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/School/ECPE/ECPE174/final_final_project/final_project/display.sv                 ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf                           ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc                    ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/lpm_mux.inc                              ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/lpm_decode.inc                           ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/aglobal221.inc                           ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/a_rdenreg.inc                            ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altrom.inc                               ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altram.inc                               ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altdpram.inc                             ;         ;
+; db/altsyncram_la81.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_final_project/final_project/db/altsyncram_la81.tdf     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/lpm_divide.tdf                           ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/abs_divider.inc                          ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/sign_div_unsign.inc                      ;         ;
+; db/lpm_divide_l9m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_final_project/final_project/db/lpm_divide_l9m.tdf      ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_final_project/final_project/db/sign_div_unsign_akh.tdf ;         ;
+; db/alt_u_div_84f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_final_project/final_project/db/alt_u_div_84f.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_final_project/final_project/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_final_project/final_project/db/add_sub_8pc.tdf         ;         ;
+; db/lpm_divide_m9m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_final_project/final_project/db/lpm_divide_m9m.tdf      ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_final_project/final_project/db/sign_div_unsign_bkh.tdf ;         ;
+; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/School/ECPE/ECPE174/final_final_project/final_project/db/alt_u_div_a4f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 5     ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 5     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimated Total logic elements              ; 292                  ;
+;                                             ;                      ;
+; Total combinational functions               ; 269                  ;
+; Logic element usage by number of LUT inputs ;                      ;
+;     -- 4 input functions                    ; 101                  ;
+;     -- 3 input functions                    ; 65                   ;
+;     -- <=2 input functions                  ; 103                  ;
+;                                             ;                      ;
+; Logic elements by mode                      ;                      ;
+;     -- normal mode                          ; 191                  ;
+;     -- arithmetic mode                      ; 78                   ;
+;                                             ;                      ;
+; Total registers                             ; 104                  ;
+;     -- Dedicated logic registers            ; 104                  ;
+;     -- I/O registers                        ; 0                    ;
+;                                             ;                      ;
+; I/O pins                                    ; 55                   ;
+; Total memory bits                           ; 364                  ;
+;                                             ;                      ;
+; Embedded Multiplier 9-bit elements          ; 0                    ;
+;                                             ;                      ;
+; Maximum fan-out node                        ; clockdiv:cd|clkstate ;
+; Maximum fan-out                             ; 79                   ;
+; Total fan-out                               ; 1273                 ;
+; Average fan-out                             ; 2.60                 ;
++---------------------------------------------+----------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |fullgame                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |fullgame           ; fullgame    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                  ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |fullgame                                 ; 269 (41)            ; 104 (1)                   ; 364         ; 0            ; 0       ; 0         ; 55   ; 0            ; |fullgame                                                                                                                ; fullgame            ; work         ;
+;    |alu_logic:datapath|                   ; 56 (56)             ; 21 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|alu_logic:datapath                                                                                             ; alu_logic           ; work         ;
+;    |asyncRst_syncRst:rst_sync|            ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|asyncRst_syncRst:rst_sync                                                                                      ; asyncRst_syncRst    ; work         ;
+;    |card_draw:draw|                       ; 14 (9)              ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|card_draw:draw                                                                                                 ; card_draw           ; work         ;
+;       |lpm_divide:Mod0|                   ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|card_draw:draw|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_m9m:auto_generated|  ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|card_draw:draw|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                   ; lpm_divide_m9m      ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|card_draw:draw|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
+;                |alt_u_div_a4f:divider|    ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|card_draw:draw|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f       ; work         ;
+;    |clockdiv:cd|                          ; 55 (55)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|clockdiv:cd                                                                                                    ; clockdiv            ; work         ;
+;    |deck_loader:loader|                   ; 26 (11)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|deck_loader:loader                                                                                             ; deck_loader         ; work         ;
+;       |deck_lookup:rom|                   ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|deck_loader:loader|deck_lookup:rom                                                                             ; deck_lookup         ; work         ;
+;    |deck_memory:bram|                     ; 0 (0)               ; 0 (0)                     ; 364         ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|deck_memory:bram                                                                                               ; deck_memory         ; work         ;
+;       |altsyncram:deck_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 364         ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|deck_memory:bram|altsyncram:deck_rtl_0                                                                         ; altsyncram          ; work         ;
+;          |altsyncram_la81:auto_generated| ; 0 (0)               ; 0 (0)                     ; 364         ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated                                          ; altsyncram_la81     ; work         ;
+;    |display:disp_p0|                      ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|display:disp_p0                                                                                                ; display             ; work         ;
+;    |game_fsm:game|                        ; 17 (17)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|game_fsm:game                                                                                                  ; game_fsm            ; work         ;
+;    |lpm_divide:Mod0|                      ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|lpm_divide:Mod0                                                                                                ; lpm_divide          ; work         ;
+;       |lpm_divide_l9m:auto_generated|     ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|lpm_divide:Mod0|lpm_divide_l9m:auto_generated                                                                  ; lpm_divide_l9m      ; work         ;
+;          |sign_div_unsign_akh:divider|    ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|lpm_divide:Mod0|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider                                      ; sign_div_unsign_akh ; work         ;
+;             |alt_u_div_84f:divider|       ; 51 (51)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|lpm_divide:Mod0|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider                ; alt_u_div_84f       ; work         ;
+;    |synchronizer:hit_sync|                ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|synchronizer:hit_sync                                                                                          ; synchronizer        ; work         ;
+;    |synchronizer:stand_sync|              ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullgame|synchronizer:stand_sync                                                                                        ; synchronizer        ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                ;
++----------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                             ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++----------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+; deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 52           ; 7            ; --           ; --           ; 364  ; None ;
++----------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
 
 
 Encoding Type:  One-Hot
@@ -300,86 +342,20 @@ Encoding Type:  One-Hot
 +------------+------------+------------+-------------+
 
 
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+----------------------------------------+--------------------+
-; Register name                          ; Reason for Removal ;
-+----------------------------------------+--------------------+
-; game_fsm:game|state~4                  ; Lost fanout        ;
-; game_fsm:game|state~5                  ; Lost fanout        ;
-; game_fsm:game|state~6                  ; Lost fanout        ;
-; game_fsm:game|state~7                  ; Lost fanout        ;
-; card_draw:draw|state~4                 ; Lost fanout        ;
-; card_draw:draw|state~5                 ; Lost fanout        ;
-; card_draw:draw|state~6                 ; Lost fanout        ;
-; deck_loader:loader|state.load          ; Lost fanout        ;
-; card_draw:draw|state.used              ; Lost fanout        ;
-; deck_loader:loader|state.done          ; Lost fanout        ;
-; deck_loader:loader|addr[0]             ; Lost fanout        ;
-; card_draw:draw|lfsr[0..5]              ; Lost fanout        ;
-; card_draw:draw|state.idle              ; Lost fanout        ;
-; card_draw:draw|state.done              ; Lost fanout        ;
-; asyncRst_syncRst:rst_sync|syncRst      ; Lost fanout        ;
-; deck_loader:loader|state.idle          ; Lost fanout        ;
-; card_draw:draw|state.check             ; Lost fanout        ;
-; synchronizer:hit_sync|ff3              ; Lost fanout        ;
-; synchronizer:hit_sync|ff2              ; Lost fanout        ;
-; card_draw:draw|card_ready              ; Lost fanout        ;
-; game_fsm:game|state.hit_s              ; Lost fanout        ;
-; game_fsm:game|state.deal_player1       ; Lost fanout        ;
-; game_fsm:game|state.stand_s            ; Lost fanout        ;
-; card_draw:draw|req_d                   ; Lost fanout        ;
-; asyncRst_syncRst:rst_sync|iRst         ; Lost fanout        ;
-; card_draw:draw|state.read_wait         ; Lost fanout        ;
-; synchronizer:hit_sync|ff1              ; Lost fanout        ;
-; synchronizer:stand_sync|ff3            ; Lost fanout        ;
-; synchronizer:stand_sync|ff2            ; Lost fanout        ;
-; game_fsm:game|state.wait_d2            ; Lost fanout        ;
-; game_fsm:game|state.idle               ; Lost fanout        ;
-; card_draw:draw|card_data_out[0]        ; Lost fanout        ;
-; alu_logic:datapath|card_ready_d        ; Lost fanout        ;
-; alu_logic:datapath|pending_dealer      ; Lost fanout        ;
-; card_draw:draw|card_data_out[1..3]     ; Lost fanout        ;
-; card_draw:draw|state.gen               ; Lost fanout        ;
-; synchronizer:stand_sync|ff1            ; Lost fanout        ;
-; game_fsm:game|state.result             ; Lost fanout        ;
-; game_fsm:game|state.deal_player2       ; Lost fanout        ;
-; game_fsm:game|state.deal_dealer1       ; Lost fanout        ;
-; game_fsm:game|state.deal_dealer2       ; Lost fanout        ;
-; game_fsm:game|state.wait_d1            ; Lost fanout        ;
-; game_fsm:game|state.wait_p1            ; Lost fanout        ;
-; game_fsm:game|state.wait_p2            ; Lost fanout        ;
-; deck_loader:loader|addr[1..5]          ; Lost fanout        ;
-; alu_logic:datapath|dealer_sum[0..5]    ; Lost fanout        ;
-; Total Number of Removed Registers = 62 ;                    ;
-+----------------------------------------+--------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                              ;
-+-----------------------------+--------------------+---------------------------------------------------------------------------------------+
-; Register name               ; Reason for Removal ; Registers Removed due to This Register                                                ;
-+-----------------------------+--------------------+---------------------------------------------------------------------------------------+
-; card_draw:draw|lfsr[5]      ; Lost Fanouts       ; card_draw:draw|lfsr[4], card_draw:draw|lfsr[3], card_draw:draw|lfsr[2],               ;
-;                             ;                    ; card_draw:draw|lfsr[1], card_draw:draw|lfsr[0], card_draw:draw|state.idle,            ;
-;                             ;                    ; card_draw:draw|state.done, synchronizer:hit_sync|ff3, synchronizer:hit_sync|ff2,      ;
-;                             ;                    ; game_fsm:game|state.hit_s, game_fsm:game|state.deal_player1,                          ;
-;                             ;                    ; synchronizer:hit_sync|ff1, synchronizer:stand_sync|ff3, synchronizer:stand_sync|ff2,  ;
-;                             ;                    ; game_fsm:game|state.wait_d2, game_fsm:game|state.idle, synchronizer:stand_sync|ff1,   ;
-;                             ;                    ; game_fsm:game|state.result, game_fsm:game|state.deal_player2,                         ;
-;                             ;                    ; game_fsm:game|state.deal_dealer1, game_fsm:game|state.deal_dealer2                    ;
-; card_draw:draw|state~6      ; Lost Fanouts       ; deck_loader:loader|state.load, deck_loader:loader|addr[0],                            ;
-;                             ;                    ; deck_loader:loader|state.idle, deck_loader:loader|addr[1],                            ;
-;                             ;                    ; deck_loader:loader|addr[2], deck_loader:loader|addr[3], deck_loader:loader|addr[4],   ;
-;                             ;                    ; deck_loader:loader|addr[5]                                                            ;
-; card_draw:draw|state~4      ; Lost Fanouts       ; card_draw:draw|state.used, deck_loader:loader|state.done, card_draw:draw|state.check, ;
-;                             ;                    ; card_draw:draw|req_d, card_draw:draw|state.read_wait                                  ;
-; game_fsm:game|state.stand_s ; Lost Fanouts       ; alu_logic:datapath|dealer_sum[1], alu_logic:datapath|dealer_sum[3],                   ;
-;                             ;                    ; alu_logic:datapath|dealer_sum[4], alu_logic:datapath|dealer_sum[5]                    ;
-; game_fsm:game|state~4       ; Lost Fanouts       ; asyncRst_syncRst:rst_sync|syncRst, card_draw:draw|card_ready,                         ;
-;                             ;                    ; asyncRst_syncRst:rst_sync|iRst                                                        ;
-; card_draw:draw|state~5      ; Lost Fanouts       ; card_draw:draw|state.gen                                                              ;
-+-----------------------------+--------------------+---------------------------------------------------------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; game_fsm:game|state~4                 ; Lost fanout        ;
+; game_fsm:game|state~5                 ; Lost fanout        ;
+; game_fsm:game|state~6                 ; Lost fanout        ;
+; game_fsm:game|state~7                 ; Lost fanout        ;
+; card_draw:draw|state~4                ; Lost fanout        ;
+; card_draw:draw|state~5                ; Lost fanout        ;
+; card_draw:draw|state~6                ; Lost fanout        ;
+; Total Number of Removed Registers = 7 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -387,14 +363,26 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 104   ;
+; Number of registers using Synchronous Clear  ; 24    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 65    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 29    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; card_draw:draw|lfsr[0]                 ; 2       ;
+; card_draw:draw|lfsr[5]                 ; 3       ;
+; card_draw:draw|lfsr[3]                 ; 4       ;
+; Total number of inverted registers = 3 ;         ;
++----------------------------------------+---------+
 
 
 +----------------------------------------------------------------------+
@@ -406,17 +394,19 @@ Encoding Type:  One-Hot
 +---------------------------------+-----------------------------+------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |fullgame|alu_logic:datapath|dealer_sum[0] ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |fullgame|mem_in[5]                        ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |fullgame|mem_addr[0]                      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |fullgame|deck_loader:loader|Selector1     ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |fullgame|game_fsm:game|Selector1          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |fullgame|alu_logic:datapath|player_sum[2]        ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |fullgame|alu_logic:datapath|dealer_card_count[2] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |fullgame|mem_in[3]                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |fullgame|HEX6                                    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |fullgame|mem_addr[0]                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |fullgame|deck_loader:loader|Selector0            ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |fullgame|game_fsm:game|Selector1                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -489,6 +479,29 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_l9m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: card_draw:draw|lpm_divide:Mod0 ;
 +------------------------+----------------+---------------------------------------+
@@ -532,26 +545,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "display:disp_p0"                                                                                                                                                                              ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; displayNum       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (6 bits) it drives.  The 26 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; displayNum[5..4] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "alu_logic:datapath"                                                                        ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; player_bust ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; player_win  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; dealer_win  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; tie         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "card_draw:draw"                                                                                    ;
-+---------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                ; Type   ; Severity ; Details                                                                             ;
-+---------------------+--------+----------+-------------------------------------------------------------------------------------+
-; deck_read_en        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; card_data_out[6..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_draw:draw"                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; deck_read_en ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -574,14 +593,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 5                               ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 55                          ;
+; cycloneiii_ff         ; 104                         ;
+;     CLR               ; 28                          ;
+;     CLR SCLR          ; 8                           ;
+;     ENA CLR           ; 13                          ;
+;     ENA CLR SCLR      ; 16                          ;
+;     plain             ; 39                          ;
+; cycloneiii_lcell_comb ; 273                         ;
+;     arith             ; 78                          ;
+;         2 data inputs ; 47                          ;
+;         3 data inputs ; 31                          ;
+;     normal            ; 195                         ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 43                          ;
+;         3 data inputs ; 34                          ;
+;         4 data inputs ; 101                         ;
+; cycloneiii_ram_block  ; 7                           ;
+;                       ;                             ;
+; Max LUT depth         ; 11.60                       ;
+; Average LUT depth     ; 4.56                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -599,51 +635,63 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Fri Nov 28 22:18:39 2025
+    Info: Processing started: Fri Dec  5 13:46:00 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final -c final
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 32 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file clockdiv.sv
+    Info (12023): Found entity 1: clockdiv File: D:/School/ECPE/ECPE174/final_final_project/final_project/clockdiv.sv Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file dealer_hand.sv
+    Info (12023): Found entity 1: dealer_hand File: D:/School/ECPE/ECPE174/final_final_project/final_project/dealer_hand.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file player_hand.sv
+    Info (12023): Found entity 1: player_hand File: D:/School/ECPE/ECPE174/final_final_project/final_project/player_hand.sv Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file deck_memory.sv
-    Info (12023): Found entity 1: deck_memory File: D:/School/ECPE/ECPE174/final_project/deck_memory.sv Line: 1
+    Info (12023): Found entity 1: deck_memory File: D:/School/ECPE/ECPE174/final_final_project/final_project/deck_memory.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file deck_lookup.sv
-    Info (12023): Found entity 1: deck_lookup File: D:/School/ECPE/ECPE174/final_project/deck_lookup.sv Line: 1
+    Info (12023): Found entity 1: deck_lookup File: D:/School/ECPE/ECPE174/final_final_project/final_project/deck_lookup.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file asyncrst_syncrst.sv
-    Info (12023): Found entity 1: asyncRst_syncRst File: D:/School/ECPE/ECPE174/final_project/asyncRst_syncRst.sv Line: 1
+    Info (12023): Found entity 1: asyncRst_syncRst File: D:/School/ECPE/ECPE174/final_final_project/final_project/asyncRst_syncRst.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file synchronizer.sv
-    Info (12023): Found entity 1: synchronizer File: D:/School/ECPE/ECPE174/final_project/synchronizer.sv Line: 1
+    Info (12023): Found entity 1: synchronizer File: D:/School/ECPE/ECPE174/final_final_project/final_project/synchronizer.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder6.sv
-    Info (12023): Found entity 1: adder6 File: D:/School/ECPE/ECPE174/final_project/adder6.sv Line: 1
+    Info (12023): Found entity 1: adder6 File: D:/School/ECPE/ECPE174/final_final_project/final_project/adder6.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file result_add.sv
-    Info (12023): Found entity 1: result_mag File: D:/School/ECPE/ECPE174/final_project/result_add.sv Line: 1
+    Info (12023): Found entity 1: result_mag File: D:/School/ECPE/ECPE174/final_final_project/final_project/result_add.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_add.sv
-    Info (12023): Found entity 1: fulladd File: D:/School/ECPE/ECPE174/final_project/full_add.sv Line: 1
+    Info (12023): Found entity 1: fulladd File: D:/School/ECPE/ECPE174/final_final_project/final_project/full_add.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file game_fsm.sv
-    Info (12023): Found entity 1: game_fsm File: D:/School/ECPE/ECPE174/final_project/game_fsm.sv Line: 79
+    Info (12023): Found entity 1: game_fsm File: D:/School/ECPE/ECPE174/final_final_project/final_project/game_fsm.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file deck_loader.sv
-    Info (12023): Found entity 1: deck_loader File: D:/School/ECPE/ECPE174/final_project/deck_loader.sv Line: 1
+    Info (12023): Found entity 1: deck_loader File: D:/School/ECPE/ECPE174/final_final_project/final_project/deck_loader.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_logic.sv
-    Info (12023): Found entity 1: alu_logic File: D:/School/ECPE/ECPE174/final_project/alu_logic.sv Line: 1
+    Info (12023): Found entity 1: alu_logic File: D:/School/ECPE/ECPE174/final_final_project/final_project/alu_logic.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file card_draw.sv
-    Info (12023): Found entity 1: card_draw File: D:/School/ECPE/ECPE174/final_project/card_draw.sv Line: 196
+    Info (12023): Found entity 1: card_draw File: D:/School/ECPE/ECPE174/final_final_project/final_project/card_draw.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pord_disp.sv
-    Info (12023): Found entity 1: PorD_disp File: D:/School/ECPE/ECPE174/final_project/PorD_disp.sv Line: 1
+    Info (12023): Found entity 1: PorD_disp File: D:/School/ECPE/ECPE174/final_final_project/final_project/PorD_disp.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fullgame.sv
-    Info (12023): Found entity 1: fullgame File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 1
+    Info (12023): Found entity 1: fullgame File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file fstb.sv
-    Info (12023): Found entity 1: fstb File: D:/School/ECPE/ECPE174/final_project/fstb.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at fullgame.sv(58): created implicit net for "deck_read_en" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 58
+    Info (12023): Found entity 1: fstb File: D:/School/ECPE/ECPE174/final_final_project/final_project/fstb.sv Line: 146
+Info (12021): Found 1 design units, including 1 entities, in source file display.sv
+    Info (12023): Found entity 1: display File: D:/School/ECPE/ECPE174/final_final_project/final_project/display.sv Line: 37
+Info (12021): Found 1 design units, including 1 entities, in source file display10.sv
+    Info (12023): Found entity 1: display10 File: D:/School/ECPE/ECPE174/final_final_project/final_project/display10.sv Line: 1
 Info (12127): Elaborating entity "fullgame" for the top level hierarchy
-Info (12128): Elaborating entity "synchronizer" for hierarchy "synchronizer:hit_sync" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 39
-Info (12128): Elaborating entity "asyncRst_syncRst" for hierarchy "asyncRst_syncRst:rst_sync" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 42
-Info (12128): Elaborating entity "deck_loader" for hierarchy "deck_loader:loader" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 52
-Warning (10230): Verilog HDL assignment warning at deck_loader.sv(30): truncated value with size 32 to match size of target (6) File: D:/School/ECPE/ECPE174/final_project/deck_loader.sv Line: 30
-Info (12128): Elaborating entity "deck_lookup" for hierarchy "deck_loader:loader|deck_lookup:rom" File: D:/School/ECPE/ECPE174/final_project/deck_loader.sv Line: 17
-Info (12128): Elaborating entity "card_draw" for hierarchy "card_draw:draw" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 64
-Info (12128): Elaborating entity "deck_memory" for hierarchy "deck_memory:bram" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 76
-Info (12128): Elaborating entity "game_fsm" for hierarchy "game_fsm:game" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 95
-Info (12128): Elaborating entity "alu_logic" for hierarchy "alu_logic:datapath" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 114
+Info (12128): Elaborating entity "clockdiv" for hierarchy "clockdiv:cd" File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 65
+Info (12128): Elaborating entity "synchronizer" for hierarchy "synchronizer:hit_sync" File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 67
+Info (12128): Elaborating entity "asyncRst_syncRst" for hierarchy "asyncRst_syncRst:rst_sync" File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 70
+Info (12128): Elaborating entity "deck_loader" for hierarchy "deck_loader:loader" File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 80
+Warning (10230): Verilog HDL assignment warning at deck_loader.sv(30): truncated value with size 32 to match size of target (6) File: D:/School/ECPE/ECPE174/final_final_project/final_project/deck_loader.sv Line: 30
+Info (12128): Elaborating entity "deck_lookup" for hierarchy "deck_loader:loader|deck_lookup:rom" File: D:/School/ECPE/ECPE174/final_final_project/final_project/deck_loader.sv Line: 17
+Info (12128): Elaborating entity "card_draw" for hierarchy "card_draw:draw" File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 94
+Info (12128): Elaborating entity "deck_memory" for hierarchy "deck_memory:bram" File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 106
+Info (12128): Elaborating entity "game_fsm" for hierarchy "game_fsm:game" File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 151
+Info (12128): Elaborating entity "alu_logic" for hierarchy "alu_logic:datapath" File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 170
+Warning (10036): Verilog HDL or VHDL warning at alu_logic.sv(122): object "dealer_wait" assigned a value but never read File: D:/School/ECPE/ECPE174/final_final_project/final_project/alu_logic.sv Line: 122
+Info (12128): Elaborating entity "display" for hierarchy "display:disp_p0" File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 235
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "deck_loader:loader|deck_lookup:rom|Ram0" is uninferred due to inappropriate RAM size File: D:/School/ECPE/ECPE174/final_project/deck_lookup.sv Line: 12
+    Info (276004): RAM logic "deck_loader:loader|deck_lookup:rom|Ram0" is uninferred due to inappropriate RAM size File: D:/School/ECPE/ECPE174/final_final_project/final_project/deck_lookup.sv Line: 12
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "deck_memory:bram|deck_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to SINGLE_PORT
@@ -656,8 +704,9 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter READ_DURING_WRITE_MODE_PORT_A set to OLD_DATA
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "card_draw:draw|Mod0" File: D:/School/ECPE/ECPE174/final_project/card_draw.sv Line: 253
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 235
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "card_draw:draw|Mod0" File: D:/School/ECPE/ECPE174/final_final_project/final_project/card_draw.sv Line: 23
 Info (12130): Elaborated megafunction instantiation "deck_memory:bram|altsyncram:deck_rtl_0"
 Info (12133): Instantiated megafunction "deck_memory:bram|altsyncram:deck_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "SINGLE_PORT"
@@ -671,48 +720,58 @@ Info (12133): Instantiated megafunction "deck_memory:bram|altsyncram:deck_rtl_0"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_la81.tdf
-    Info (12023): Found entity 1: altsyncram_la81 File: D:/School/ECPE/ECPE174/final_project/db/altsyncram_la81.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "card_draw:draw|lpm_divide:Mod0" File: D:/School/ECPE/ECPE174/final_project/card_draw.sv Line: 253
-Info (12133): Instantiated megafunction "card_draw:draw|lpm_divide:Mod0" with the following parameter: File: D:/School/ECPE/ECPE174/final_project/card_draw.sv Line: 253
+    Info (12023): Found entity 1: altsyncram_la81 File: D:/School/ECPE/ECPE174/final_final_project/final_project/db/altsyncram_la81.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 235
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 235
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_l9m.tdf
+    Info (12023): Found entity 1: lpm_divide_l9m File: D:/School/ECPE/ECPE174/final_final_project/final_project/db/lpm_divide_l9m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_akh File: D:/School/ECPE/ECPE174/final_final_project/final_project/db/sign_div_unsign_akh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_84f.tdf
+    Info (12023): Found entity 1: alt_u_div_84f File: D:/School/ECPE/ECPE174/final_final_project/final_project/db/alt_u_div_84f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: D:/School/ECPE/ECPE174/final_final_project/final_project/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: D:/School/ECPE/ECPE174/final_final_project/final_project/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "card_draw:draw|lpm_divide:Mod0" File: D:/School/ECPE/ECPE174/final_final_project/final_project/card_draw.sv Line: 23
+Info (12133): Instantiated megafunction "card_draw:draw|lpm_divide:Mod0" with the following parameter: File: D:/School/ECPE/ECPE174/final_final_project/final_project/card_draw.sv Line: 23
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m9m.tdf
-    Info (12023): Found entity 1: lpm_divide_m9m File: D:/School/ECPE/ECPE174/final_project/db/lpm_divide_m9m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_m9m File: D:/School/ECPE/ECPE174/final_final_project/final_project/db/lpm_divide_m9m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_bkh File: D:/School/ECPE/ECPE174/final_project/db/sign_div_unsign_bkh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: D:/School/ECPE/ECPE174/final_final_project/final_project/db/sign_div_unsign_bkh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
-    Info (12023): Found entity 1: alt_u_div_a4f File: D:/School/ECPE/ECPE174/final_project/db/alt_u_div_a4f.tdf Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: D:/School/ECPE/ECPE174/final_project/db/add_sub_7pc.tdf Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: D:/School/ECPE/ECPE174/final_project/db/add_sub_8pc.tdf Line: 23
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated|ram_block1a0" File: D:/School/ECPE/ECPE174/final_project/db/altsyncram_la81.tdf Line: 37
-        Warning (14320): Synthesized away node "deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated|ram_block1a1" File: D:/School/ECPE/ECPE174/final_project/db/altsyncram_la81.tdf Line: 58
-        Warning (14320): Synthesized away node "deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated|ram_block1a2" File: D:/School/ECPE/ECPE174/final_project/db/altsyncram_la81.tdf Line: 79
-        Warning (14320): Synthesized away node "deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated|ram_block1a3" File: D:/School/ECPE/ECPE174/final_project/db/altsyncram_la81.tdf Line: 100
-        Warning (14320): Synthesized away node "deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated|ram_block1a4" File: D:/School/ECPE/ECPE174/final_project/db/altsyncram_la81.tdf Line: 121
-        Warning (14320): Synthesized away node "deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated|ram_block1a5" File: D:/School/ECPE/ECPE174/final_project/db/altsyncram_la81.tdf Line: 142
-        Warning (14320): Synthesized away node "deck_memory:bram|altsyncram:deck_rtl_0|altsyncram_la81:auto_generated|ram_block1a6" File: D:/School/ECPE/ECPE174/final_project/db/altsyncram_la81.tdf Line: 163
-Info (17049): 62 registers lost all their fanouts during netlist optimizations.
+    Info (12023): Found entity 1: alt_u_div_a4f File: D:/School/ECPE/ECPE174/final_final_project/final_project/db/alt_u_div_a4f.tdf Line: 27
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: D:/School/ECPE/ECPE174/final_final_project/final_project/card_draw.sv Line: 20
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 9
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 10
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 10
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 10
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 10
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: D:/School/ECPE/ECPE174/final_final_project/final_project/fullgame.sv Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 7 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 5 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 1
-    Warning (15610): No output dependent on input pin "rst" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 1
-    Warning (15610): No output dependent on input pin "start" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 1
-    Warning (15610): No output dependent on input pin "hit" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 1
-    Warning (15610): No output dependent on input pin "stand" File: D:/School/ECPE/ECPE174/final_project/fullgame.sv Line: 1
-Info (21057): Implemented 5 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 355 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4772 megabytes
-    Info: Processing ended: Fri Nov 28 22:18:45 2025
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:19
+    Info (21059): Implemented 50 output pins
+    Info (21061): Implemented 293 logic cells
+    Info (21064): Implemented 7 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Fri Dec  5 13:46:07 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:18
 
 

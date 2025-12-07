@@ -2,7 +2,204 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "HEX0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX6[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "load_done",
+					"strict" : false
+				},
+				{
+					"name" : "is_idle",
+					"strict" : false
+				},
+				{
+					"name" : "is_deal_player1",
+					"strict" : false
+				},
+				{
+					"name" : "is_wait_p1",
+					"strict" : false
+				},
+				{
+					"name" : "is_deal_dealer1",
+					"strict" : false
+				},
+				{
+					"name" : "is_wait_d1",
+					"strict" : false
+				},
+				{
+					"name" : "is_deal_player2",
+					"strict" : false
+				},
+				{
+					"name" : "is_wait_p2",
+					"strict" : false
+				},
+				{
+					"name" : "is_deal_dealer2",
+					"strict" : false
+				},
+				{
+					"name" : "is_wait_d2",
+					"strict" : false
+				},
+				{
+					"name" : "is_hit_s",
+					"strict" : false
+				},
+				{
+					"name" : "is_stand_s",
+					"strict" : false
+				},
+				{
+					"name" : "is_result",
+					"strict" : false
+				},
+				{
+					"name" : "p_rq",
+					"strict" : false
+				},
+				{
+					"name" : "d_rq",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "stand",
+					"strict" : false
+				},
+				{
+					"name" : "hit",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

@@ -1,0 +1,10 @@
+module display10(
+    output logic [6:0] disp1, // left (shows '1')
+    output logic [6:0] disp2  // right (shows '0')
+);
+
+    // disp1 will show the digit '1' (4'd1) and disp2 will show '0' (4'd0).
+    display disp_tens(.displayNum(4'd1), .displayOut(disp1));
+    display disp_ones(.displayNum(4'd0), .displayOut(disp2));
+
+endmodule

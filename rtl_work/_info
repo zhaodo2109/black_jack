@@ -6,10 +6,6 @@ R0
 R0
 R0
 R0
-R0
-R0
-R0
-R0
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -19,303 +15,409 @@ R0
 cModel Technology
 Z1 dD:/School/ECPE/ECPE174/final_project
 T_opt
-!s110 1764572699
-Vdek3i_H>17WVm[<Lzm?L20
-04 4 4 work fstb fast 0
-=1-58020512d5e2-692d3e1a-35b-770c
+!s110 1764802978
+V7Y2Mn6GaAkYl=1IZ<Hgn60
+Z2 04 4 4 work fstb fast 0
+=1-58020512d5e2-6930c1a2-32-e638
 !s124 OEM10U11 
-o-quiet -auto_acc_if_foreign -work work +acc
-Z2 tCvgOpt 0
+Z3 o-quiet -auto_acc_if_foreign -work work +acc
+Z4 tCvgOpt 0
 n@_opt
-OL;O;2021.2;73
+Z5 OL;O;2021.2;73
 R1
+T_opt1
+Z6 !s110 1764913211
+V?VaZ9oeEo[KS_=`lozjZH2
+R2
+=2-4cd717915275-6932703b-2c2-3844
+!s124 OEM10U23 
+R3
+R4
+n@_opt1
+R5
 vadder6
-Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z4 !s110 1764572749
+Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z8 !s110 1764913210
 !i10b 1
 !s100 LeUIFW0e=1B?og`>;W1o_2
-Ieg`M]Fb67d2h=_VP9nGPI1
+I<8GBSDb[^QJGn^dh<nmMn1
 S1
-R1
-w1763596384
-8D:/School/ECPE/ECPE174/final_project/adder6.sv
-FD:/School/ECPE/ECPE174/final_project/adder6.sv
+Z9 dC:/Users/anguy298/Downloads/final_project (1)/final_project
+Z10 w1764889694
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/adder6.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/adder6.sv
 !i122 4
 L0 1 27
-Z5 VDg1SIo80bB@j0V0VzS_@n1
-Z6 OL;L;2021.2;73
+Z11 VDg1SIo80bB@j0V0VzS_@n1
+Z12 OL;L;2021.2;73
 r1
 !s85 0
 31
-Z7 !s108 1764572749.000000
-!s107 D:/School/ECPE/ECPE174/final_project/adder6.sv|
-!s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/adder6.sv|
+Z13 !s108 1764913210.000000
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/adder6.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/adder6.sv|
 !i113 0
-Z8 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
-valu_logic
-R3
+Z14 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R4
+valu_logic
+R7
+R8
 !i10b 1
 !s100 4`B>`S3>47`>Si3f1[fW70
-I<kfZVa5HJR`6:Po8Adf0m1
+I]oS<[YjH6g<I_goW6SaA00
 S1
-R1
-w1764570697
-8D:/School/ECPE/ECPE174/final_project/alu_logic.sv
-FD:/School/ECPE/ECPE174/final_project/alu_logic.sv
+R9
+R10
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/alu_logic.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/alu_logic.sv
 !i122 5
 L0 1 204
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
-R7
-!s107 D:/School/ECPE/ECPE174/final_project/alu_logic.sv|
-!s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/alu_logic.sv|
+R13
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/alu_logic.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/alu_logic.sv|
 !i113 0
-R8
-R2
+R14
+R4
 vasyncRst_syncRst
-R3
-Z9 !s110 1764572750
+R7
+R6
 !i10b 1
 !s100 >`diZNi@ihNY4@CC0GX_P0
-IWgjHVVb?Mj@GjZ7LGOoAH2
+I[X?Md`<d9DG_CWJ?8iGDa1
 S1
-R1
-w1763596013
-8D:/School/ECPE/ECPE174/final_project/asyncRst_syncRst.sv
-FD:/School/ECPE/ECPE174/final_project/asyncRst_syncRst.sv
+R9
+R10
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/asyncRst_syncRst.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/asyncRst_syncRst.sv
 !i122 10
-Z10 L0 1 16
-R5
-R6
+Z15 L0 1 16
+R11
+R12
 r1
 !s85 0
 31
-Z11 !s108 1764572750.000000
-!s107 D:/School/ECPE/ECPE174/final_project/asyncRst_syncRst.sv|
-!s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/asyncRst_syncRst.sv|
+Z16 !s108 1764913211.000000
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/asyncRst_syncRst.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/asyncRst_syncRst.sv|
 !i113 0
-R8
-R2
+R14
+R4
 nasync@rst_sync@rst
 vcard_draw
-R3
-R4
+R7
+R8
 !i10b 1
 !s100 l2:nO2a<Kz8d<i54I[LC_0
-ITZMJ6?J@MC4XDkz@4Ez2E2
+ITfdZkcHKCVDYJajfEU[:S1
 S1
-R1
-w1764565003
-8D:/School/ECPE/ECPE174/final_project/card_draw.sv
-FD:/School/ECPE/ECPE174/final_project/card_draw.sv
+R9
+R10
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/card_draw.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/card_draw.sv
 !i122 6
 L0 1 95
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
-R7
-!s107 D:/School/ECPE/ECPE174/final_project/card_draw.sv|
-!s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/card_draw.sv|
+R13
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/card_draw.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/card_draw.sv|
 !i113 0
-R8
-R2
-vdeck_loader
-R3
+R14
 R4
+vdealer_hand
+R7
+R6
+!i10b 1
+!s100 58n]ocQUWS3T_De=PCGeg0
+I=9E4SdND<Xd40MbZdF[Le2
+S1
+R9
+w1764894213
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/dealer_hand.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/dealer_hand.sv
+!i122 13
+L0 1 21
+R11
+R12
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/dealer_hand.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/dealer_hand.sv|
+!i113 0
+R14
+R4
+vdeck_loader
+R7
+R8
 !i10b 1
 !s100 M6F8Z;Jm7Ae6T9]]MY`R:2
-ITYC5X8C:aV8RgG6Zf4E?_0
+IiKVgla_F2BL7jm;ShW6SC2
 S1
-R1
-w1764206018
-8D:/School/ECPE/ECPE174/final_project/deck_loader.sv
-FD:/School/ECPE/ECPE174/final_project/deck_loader.sv
+R9
+R10
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/deck_loader.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/deck_loader.sv
 !i122 3
 L0 1 63
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
-R7
-!s107 D:/School/ECPE/ECPE174/final_project/deck_loader.sv|
-!s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/deck_loader.sv|
+R13
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/deck_loader.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/deck_loader.sv|
 !i113 0
-R8
-R2
-vdeck_lookup
-R3
+R14
 R4
+vdeck_lookup
+R7
+R8
 !i10b 1
 !s100 :kdG=d1;@1D6>IORlT]OR1
-I:PO35PY8W_6[Xh>@R4SmU3
+IMGS@TE:gChV7QenXzBV843
 S1
-R1
-w1762556200
-8D:/School/ECPE/ECPE174/final_project/deck_lookup.sv
-FD:/School/ECPE/ECPE174/final_project/deck_lookup.sv
+R9
+R10
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/deck_lookup.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/deck_lookup.sv
 !i122 2
 L0 1 78
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
-R7
-!s107 D:/School/ECPE/ECPE174/final_project/deck_lookup.sv|
-!s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/deck_lookup.sv|
+R13
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/deck_lookup.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/deck_lookup.sv|
 !i113 0
-R8
-R2
-vdeck_memory
-R3
+R14
 R4
+vdeck_memory
+R7
+R8
 !i10b 1
 !s100 ^IR:`E@>>Y2eTQWHzZZ_o0
-I^c6m3Td7N4IJ;Ud4l7SNH3
+I>DUh@HTQH0hW;T[`7OgZ>2
 S1
-R1
-w1764380530
-8D:/School/ECPE/ECPE174/final_project/deck_memory.sv
-FD:/School/ECPE/ECPE174/final_project/deck_memory.sv
-!i122 1
+R9
 R10
-R5
-R6
-r1
-!s85 0
-31
-R7
-!s107 D:/School/ECPE/ECPE174/final_project/deck_memory.sv|
-!s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/deck_memory.sv|
-!i113 0
-R8
-R2
-vfstb
-R3
-R9
-!i10b 1
-!s100 EK`P^F5HQK0`Zo>2J]6k72
-I:O?]0oHJOC5:ha>nD2_<?1
-S1
-R1
-w1764572692
-8D:/School/ECPE/ECPE174/final_project/fstb.sv
-FD:/School/ECPE/ECPE174/final_project/fstb.sv
-!i122 11
-L0 146 169
-R5
-R6
-r1
-!s85 0
-31
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/deck_memory.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/deck_memory.sv
+!i122 1
+R15
 R11
-!s107 D:/School/ECPE/ECPE174/final_project/fstb.sv|
-!s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/fstb.sv|
-!i113 0
-R8
-R2
-vfullgame
-R3
-R4
-!i10b 1
-!s100 cj3DK33cXP7zBh7MZhYNn3
-IPS`mS6eCjn:izKgZhj=O30
-S1
-R1
-w1764570130
-8D:/School/ECPE/ECPE174/final_project/fullgame.sv
-FD:/School/ECPE/ECPE174/final_project/fullgame.sv
-!i122 8
-L0 1 117
-R5
-R6
+R12
 r1
 !s85 0
 31
-R7
-!s107 D:/School/ECPE/ECPE174/final_project/fullgame.sv|
-!s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/fullgame.sv|
+R13
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/deck_memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/deck_memory.sv|
 !i113 0
-R8
-R2
-vgame_fsm
-R3
+R14
+R4
+vdisplay
+R7
+R6
+!i10b 1
+!s100 g?JVE@bf[Qo6MNP[fDCNR0
+I^lK[>BDYkc<EFl0XzgUNa1
+S1
 R9
-!i10b 1
-!s100 V6EhQ9Q=Fc]K_DoBPSSSF2
-I[TVj89i_^EP6hTVEjlAz<1
-S1
-R1
-w1764572596
-8D:/School/ECPE/ECPE174/final_project/game_fsm.sv
-FD:/School/ECPE/ECPE174/final_project/game_fsm.sv
-!i122 9
-L0 79 175
-R5
-R6
+w1764893064
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/display.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/display.sv
+!i122 11
+L0 1 26
+R11
+R12
 r1
 !s85 0
 31
-R7
-!s107 D:/School/ECPE/ECPE174/final_project/game_fsm.sv|
-!s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/game_fsm.sv|
+R16
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/display.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/display.sv|
 !i113 0
-R8
-R2
-vPorD_disp
-R3
+R14
 R4
+vdisplay10
+R7
+R6
+!i10b 1
+!s100 mzFQ;FbG2Il6WKKLSLRF;1
+I`oAEiXmP6a[K4DU`>Kn6h0
+S1
+R9
+w1764891295
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/display10.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/display10.sv
+!i122 12
+L0 1 10
+R11
+R12
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/display10.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/display10.sv|
+!i113 0
+R14
+R4
+vfstb
+R7
+R6
+!i10b 1
+!s100 25i64zbIcV?2[[k[@aZ7?2
+IlXj3hPXHok]BhRR:B[WTT1
+S1
+R9
+w1764913059
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/fstb.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/fstb.sv
+!i122 15
+L0 146 155
+R11
+R12
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/fstb.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/fstb.sv|
+!i113 0
+R14
+R4
+vfullgame
+R7
+R6
+!i10b 1
+!s100 COQnZhKYbliIcoUm2zC9[0
+IOU@cDbDmXggPMcg7jkKRm3
+S1
+R9
+w1764913171
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/fullgame.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/fullgame.sv
+!i122 8
+L0 2 339
+R11
+R12
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/fullgame.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/fullgame.sv|
+!i113 0
+R14
+R4
+vgame_fsm
+R7
+R6
+!i10b 1
+!s100 VLFBbIjD2U29z2Qk2fV?91
+IVd;_^B]8ACW07_FYkdR<Q1
+S1
+R9
+w1764911251
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/game_fsm.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/game_fsm.sv
+!i122 9
+L0 262 201
+R11
+R12
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/game_fsm.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/game_fsm.sv|
+!i113 0
+R14
+R4
+vplayer_hand
+R7
+R6
+!i10b 1
+!s100 BRZCn_54^zdJG[X@WXH`S0
+I5kgcOOleMU^iFmG;M;I2G1
+S1
+R9
+w1764908651
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/player_hand.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/player_hand.sv
+!i122 14
+L0 25 41
+R11
+R12
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/player_hand.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/player_hand.sv|
+!i113 0
+R14
+R4
+vPorD_disp
+R7
+R8
 !i10b 1
 !s100 oQ=2ae@2hU_O]ZATNcfX?0
-IQ^>GNfjBR<om2ol`Vambn1
+ISG@CoAK6?628`T`@PNaQV2
 S1
-R1
-w1763603531
-8D:/School/ECPE/ECPE174/final_project/PorD_disp.sv
-FD:/School/ECPE/ECPE174/final_project/PorD_disp.sv
+R9
+R10
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/PorD_disp.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/PorD_disp.sv
 !i122 7
 L0 1 39
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
-R7
-!s107 D:/School/ECPE/ECPE174/final_project/PorD_disp.sv|
-!s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/PorD_disp.sv|
+R13
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/PorD_disp.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/PorD_disp.sv|
 !i113 0
-R8
-R2
+R14
+R4
 n@por@d_disp
 vsynchronizer
-R3
-R4
+R7
+R8
 !i10b 1
 !s100 :f<AAR1idW;3@cDGnakU]3
-Inn1=8>CEEhO]_FV`ICW<Z0
+INSWXi^U^Ka@8N_VjXn66h3
 S1
-R1
-w1763596061
-8D:/School/ECPE/ECPE174/final_project/synchronizer.sv
-FD:/School/ECPE/ECPE174/final_project/synchronizer.sv
+R9
+R10
+8C:/Users/anguy298/Downloads/final_project (1)/final_project/synchronizer.sv
+FC:/Users/anguy298/Downloads/final_project (1)/final_project/synchronizer.sv
 !i122 0
 L0 1 13
-R5
-R6
+R11
+R12
 r1
 !s85 0
 31
-R7
-!s107 D:/School/ECPE/ECPE174/final_project/synchronizer.sv|
-!s90 -reportprogress|300|-sv|-work|work|D:/School/ECPE/ECPE174/final_project/synchronizer.sv|
+R13
+!s107 C:/Users/anguy298/Downloads/final_project (1)/final_project/synchronizer.sv|
+!s90 -reportprogress|300|-sv|-work|work|C:/Users/anguy298/Downloads/final_project (1)/final_project/synchronizer.sv|
 !i113 0
-R8
-R2
+R14
+R4
