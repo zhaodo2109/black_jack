@@ -1,0 +1,27 @@
+module tb_display;
+
+  logic [5:0] displayNum;
+  logic [6:0] displayOut, displayOut1, displayOut0;
+
+  display dut (
+    .displayNum (displayNum),
+    .displayOut (displayOut),
+    .displayOut1(displayOut1),
+    .displayOut0(displayOut0)
+  );
+
+  integer i;
+
+  initial begin
+    $display("=== display test begin ===");
+    for (i = 0; i <= 12; i = i + 1) begin
+      displayNum = i[5:0];
+      #1;
+      $display("rank_code=%0d | disp=%b tens=%b ones=%b",
+                displayNum, displayOut, displayOut1, displayOut0);
+    end
+    $display("=== display test end ===");
+    #20 $finish;
+  end
+
+endmodule
