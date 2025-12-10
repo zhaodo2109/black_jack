@@ -1,0 +1,22 @@
+module tb_clockdiv;
+
+  logic iclk;
+  logic oclk;
+
+  clockdiv dut (
+    .iclk(iclk),
+    .oclk(oclk)
+  );
+
+  initial iclk = 0;
+  always #1 iclk = ~iclk; // fast sim clock
+
+  initial begin
+    $display("=== clockdiv test begin ===");
+    $monitor("t=%0t | iclk=%0b oclk=%0b", $time, iclk, oclk);
+    #1000;
+    $display("=== clockdiv test end ===");
+    $finish;
+  end
+
+endmodule
